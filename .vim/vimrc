@@ -1,0 +1,122 @@
+" All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
+" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
+" you can find below.  If you wish to change any of those settings, you should
+" do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
+" everytime an upgrade of the vim packages is performed.  It is recommended to
+" make changes after sourcing archlinux.vim since it alters the value of the
+" 'compatible' option.
+
+" This line should not be removed as it ensures that various options are
+" properly set to work with the Vim-related packages.
+runtime! archlinux.vim
+" If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
+" Or better yet, read /usr/share/vim/vim74/vimrc_example.vim or the vim manual
+" and configure vim to your own liking!
+
+syntax on 
+set backspace=2
+set t_Co=256
+set nu
+set magic
+set autoindent
+set fdm=marker
+set ruler
+set cursorline   
+set cursorcolumn
+set showcmd
+set hlsearch
+set cindent
+set tabstop=4
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set shortmess=atI
+set novisualbell
+set guiheadroom=0
+filetype plugin on
+" set guifont=Schumacher\ Clean\ 10
+set guifont=Monospace\ 10
+set guifontwide=WenQuanYi_Micro_Hei_Mono\ 10
+colorscheme solarized
+set background=dark
+
+function! ToggleGUICruft()
+    if &guioptions=='i'
+        exec('set guioptions=imTrL')
+    else
+        exec('set guioptions=i')
+    endif
+endfunction
+map <F11> <Esc>:call ToggleGUICruft()<cr>
+set guioptions=i
+
+" ------------------------autoLoad---------------------------
+set wildmenu
+autocmd FileType c          set omnifunc=ccomplete#Complete
+autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
+autocmd FileType sql        set omnifunc=sqlcomplete#Complete
+autocmd FileType python     set omnifunc=pythoncomplete#CompleteTags
+autocmd FileType javascript	set omnifunc=javascriptcomplete#CompleteJS
+
+" ------------------------autoComplete-----------------------
+set ofu=syntaxcomplete#Complete
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap { {}<Esc>i
+autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
+inoremap ) <c-r>=ClosePair(')')<CR>
+inoremap ] <c-r>=ClosePair(']')<CR>
+inoremap > <c-r>=ClosePair('>')<CR>
+inoremap } <c-r>=ClosePair('}')<CR>
+inoremap " <c-r>=QuoteDelim('"')<CR>
+inoremap ' <c-r>=QuoteDelim("'")<CR>
+inoremap ` <c-r>=QuoteDelim("`")<CR>
+
+"{{{ Function for autoComplete
+function ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endf
+
+function QuoteDelim(char)
+    let line = getline('.')
+    let col = col('.')
+    if line[col - 2] == "\\"
+        return a:char
+    elseif line[col - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char.a:char."\<Esc>i"
+    endif
+endf
+"}}}
+
+function! Buf_total_num()
+    return len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+endfunction
+function! File_size(f)
+    let l:size = getfsize(expand(a:f))
+    if l:size == 0 || l:size == -1 || l:size == -2
+        return ''
+    endif
+    if l:size < 1024
+        return l:size.' bytes'
+    elseif l:size < 1024*1024
+        return printf('%.1f', l:size/1024.0).'k'
+    elseif l:size < 1024*1024*1024
+        return printf('%.1f', l:size/1024.0/1024.0) . 'm'
+    else
+        return printf('%.1f', l:size/1024.0/1024.0/1024.0) . 'g'
+    endif
+endfunction
+set statusline+=\ size:%{File_size(@%)}\ 
+set statusline+=\ %f\ 
+set statusline+=\ %m%r%y\ 
+set statusline+=%=\ %{&ff}\ \|\ %{\"\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"\ \|\"}\ %-14.(%l:%c%V%)
+set statusline+=\ %P\ 
+set laststatus=2

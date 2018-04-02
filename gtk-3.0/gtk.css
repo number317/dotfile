@@ -1,0 +1,7 @@
+@define-color simple_bg #ffffff;
+@define-color molokai_bg #1b1d1e;
+@define-color solarized_bg #002b36;
+
+window#vim-main-window {
+    background-color: @solarized_bg;
+}

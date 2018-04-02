@@ -1,0 +1,5 @@
+# Write your default config options here!
+subcp = "utf-8"
+fontconfig=0
+font = "/usr/share/fonts/wenquanyi/wqy-microhei/wqy-microhei.ttc"
+subfont-text-scale = "2.000000"
