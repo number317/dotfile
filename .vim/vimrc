@@ -13,7 +13,7 @@ runtime! archlinux.vim
 " Or better yet, read /usr/share/vim/vim74/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
 
-syntax on 
+syntax on
 set backspace=2
 set t_Co=256
 set nu
@@ -21,7 +21,7 @@ set magic
 set autoindent
 set fdm=marker
 set ruler
-set cursorline   
+set cursorline
 set cursorcolumn
 set showcmd
 set hlsearch
@@ -37,7 +37,7 @@ filetype plugin on
 " set guifont=Schumacher\ Clean\ 10
 set guifont=Monospace\ 10
 set guifontwide=WenQuanYi_Micro_Hei_Mono\ 10
-colorscheme solarized
+colorscheme typewrite
 set background=dark
 
 function! ToggleGUICruft()
@@ -114,9 +114,9 @@ function! File_size(f)
         return printf('%.1f', l:size/1024.0/1024.0/1024.0) . 'g'
     endif
 endfunction
-set statusline+=\ size:%{File_size(@%)}\ 
-set statusline+=\ %f\ 
-set statusline+=\ %m%r%y\ 
+set statusline+=\ size:%{File_size(@%)}\
+set statusline+=\ %f\
+set statusline+=\ %m%r%y\
 set statusline+=%=\ %{&ff}\ \|\ %{\"\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"\ \|\"}\ %-14.(%l:%c%V%)
-set statusline+=\ %P\ 
+set statusline+=\ %P\
 set laststatus=2
