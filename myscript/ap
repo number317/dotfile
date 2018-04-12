@@ -1,0 +1,2 @@
+#!/bin/bash
+create_ap wlp2s0 wlp2s0 connection-refused 0112358D

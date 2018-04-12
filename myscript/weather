@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+set -o pipefail
+function getWeather(){
+    if [[ $1 = '' ]]
+    then
+        curl "wttr.in" 2>/dev/null
+    else
+        curl "wttr.in/\"$1\"" 2>/dev/null
+    fi
+}
+getWeather "$1"

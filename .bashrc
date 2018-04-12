@@ -10,6 +10,7 @@ fi
 # User specific aliases and functions
 alias ls='ls --color'
 set -o vi
+export PATH=$PATH:$HOME/.local/usr/bin/
 export PS1="\[$(tput bold)\]\[\033[38;5;44m\]=> \[$(tput sgr0)\]"
 export PS2="\[$(tput bold)\]\[\033[38;5;44m\]> \[$(tput sgr0)\]"
 export EDITOR=vim

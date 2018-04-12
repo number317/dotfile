@@ -1,0 +1,8 @@
+#!/bin/bash
+percent=`cat /sys/class/power_supply/BAT0/capacity`
+if [ $percent -gt 100 ]
+then
+    percent=100
+fi
+charge=`cat /sys/class/power_supply/BAT0/status`
+echo $percent% $charge

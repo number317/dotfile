@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -# https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts > /etc/hosts

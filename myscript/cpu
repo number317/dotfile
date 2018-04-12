@@ -1,0 +1,52 @@
+#!/bin/bash
+set -e
+set -o pipefail
+set -o nounset
+
+function getCpuInfo()
+{
+    cat /proc/stat | grep "^cpu " | tr -s " " | cut -d " " -f 2-
+}
+
+function getPerCpuInfo()
+{
+    cat /proc/stat | grep "^cpu[[:alnum:]]" | tr -s " " | cut -d " " -f 2-
+}
+
+function getTotalCpu()
+{
+    echo "$1" | tr " " "\n" | awk '{cpuTotal+=$1} END {printf cpuTotal}'
+}
+
+function getIdleCpu
+{
+    echo "$1" | awk '{print $4}'
+}
+
+function calPercent()
+{
+        local cpuInfo1=$(getCpuInfo)
+        local totalCpu1=$(getTotalCpu "$cpuInfo1")
+        local idleCpu1=$(getIdleCpu "$cpuInfo1")
+
+        sleep 0.001
+
+        local cpuInfo2=$(getCpuInfo)
+        local totalCpu2=$(getTotalCpu "$cpuInfo2")
+        local idleCpu2=$(getIdleCpu "$cpuInfo2")
+
+        local diffTotalCpu=$(( "$totalCpu2"-"$totalCpu1" ))
+        local diffIdleCpu=$(( "$idleCpu2"-"$idleCpu1" ))
+        echo $(echo "scale=2; 100*("$diffTotalCpu"-"$diffIdleCpu")/"$diffTotalCpu"" | bc)
+}
+
+function main()
+{
+    while (true); do
+        local cpuUsagePercent=$(calPercent)
+        echo "cpu: $cpuUsagePercent%"
+        sleep 1 
+    done
+}
+
+main

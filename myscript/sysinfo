@@ -1,0 +1,5 @@
+#!/bin/bash
+cpu=`ps -aux | awk '{print $3}'| sed 1d | awk '{sum+=$1} END {print sum}'`
+mem=`ps -aux | awk '{print $4}'| sed 1d | awk '{sum+=$1} END {print sum}'`
+echo "cpu: $cpu"
+echo "mem: $mem"

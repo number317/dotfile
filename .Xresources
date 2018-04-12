@@ -12,8 +12,8 @@ XTerm*VT100.cursorUnderline: false
 XTerm*VT100*pointerBlank: true
 
 
-xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName: xterm-color
+!xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName: xterm-256color
 xterm*eightBitInput: false
 
 !===================================================================
@@ -49,97 +49,28 @@ xterm*eightBitInput: false
 #define _foreground    #f8f8f2
 #define _background    #2b3e50
 #define _cursorColor   #e3bf21
-!XTerm.VT100.color0         : _color0
-!XTerm.VT100.color1         : _color1
-!XTerm.VT100.color2         : _color2
-!XTerm.VT100.color3         : _color3
-!XTerm.VT100.color4         : _color4
-!XTerm.VT100.color5         : _color5
-!XTerm.VT100.color6         : _color6
-!XTerm.VT100.color7         : _color7
-!XTerm.VT100.color8         : _color8
-!XTerm.VT100.color9         : _color9
-!XTerm.VT100.color10        : _color10
-!XTerm.VT100.color11        : _color11
-!XTerm.VT100.color12        : _color12
-!XTerm.VT100.color13        : _color13
-!XTerm.VT100.color14        : _color14
-!XTerm.VT100.color15        : _color15
-!XTerm.VT100.colorBD        : _colorBD
-!XTerm.VT100.colorIT        : _colorIT
-!XTerm.VT100.colorUL        : _colorUL
+XTerm.VT100.color0         : _color0
+XTerm.VT100.color1         : _color1
+XTerm.VT100.color2         : _color2
+XTerm.VT100.color3         : _color3
+XTerm.VT100.color4         : _color4
+XTerm.VT100.color5         : _color5
+XTerm.VT100.color6         : _color6
+XTerm.VT100.color7         : _color7
+XTerm.VT100.color8         : _color8
+XTerm.VT100.color9         : _color9
+XTerm.VT100.color10        : _color10
+XTerm.VT100.color11        : _color11
+XTerm.VT100.color12        : _color12
+XTerm.VT100.color13        : _color13
+XTerm.VT100.color14        : _color14
+XTerm.VT100.color15        : _color15
+XTerm.VT100.colorBD        : _colorBD
+XTerm.VT100.colorIT        : _colorIT
+XTerm.VT100.colorUL        : _colorUL
 !XTerm.VT100.foreground     : _foreground
 !XTerm.VT100.background     : _background
-!XTerm.VT100.cursorColor    : _cursorColor
-!===================================================================
-#define base00 #eeeeee
-#define base01 #e3e3e3
-#define base02 #b9b9b9
-#define base03 #ababab
-#define base04 #525252
-#define base05 #464646
-#define base06 #252525
-#define base07 #101010
-#define base08 #7c7c7c
-#define base09 #999999
-#define base0A #a0a0a0
-#define base0B #8e8e8e
-#define base0C #868686
-#define base0D #686868
-#define base0E #747474
-#define base0F #5e5e5e
-#define base0G #FF0000
-#define base0H #009900
-
-*.foreground:   base05
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  #00BAFF
-
-! Black
-*.color0:       base00
-*.color8:       base0A
-
-! Red
-*.color1:       base08
-*.color9:       base08
-
-! Green
-*.color2:       base05
-*.color10:      base0B
-
-! Yellow
-*.color3:       base0A
-*.color11:      base0G
-
-! Blue
-*.color4:       base0D
-*.color12:      base0D
-
-! Magenta
-*.color5:       base0E
-*.color13:      base0H
-
-! Cyan
-*.color6:       base0C
-*.color14:      base0C
-
-! White
-*.color7:       base05
-*.color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
-!===================================================================
+XTerm.VT100.cursorColor    : _cursorColor
 
 
 XTerm.VT100.faceName: Monospace:style=Regular:antialias=True:pixelsize=22

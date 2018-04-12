@@ -19,6 +19,10 @@ ln -sfv "$PWD/.xinitrc" "$HOME/.xinitrc"
 
 ln -sfv "$PWD/.Xresources" "$HOME/.Xresources"
 
+mkdir -p "$HOME/.local/usr/"
+rm -rf "$HOME/.local/usr/bin"
+ln -sfv "$PWD/myscript" "$HOME/.local/usr/bin"
+
 sudo ln -sfv "$PWD/pacman.conf" "/etc/pacman.conf"
 
 sudo ln -sfv "$PWD/xorg.conf.d/70-synaptics.conf" "/etc/X11/xorg.conf.d/70-synaptics.conf"

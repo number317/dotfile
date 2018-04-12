@@ -1,0 +1,9 @@
+#!/bin/bash
+set -eo pipefail
+lrcFile=$(mpc | head -n 1 | tr '/' ',')
+lrcPath="/home/cheon/Music/lyrics/${lrcFile}.lrc"
+if [[ -e "$lrcPath" ]]; then
+    cat "$lrcPath" | dzen2 -p -fn "WenQuanYi Micro Hei Mono-10" -l 30 -w 250 -x 965 -y 20 &
+else
+    echo No lyric for this song.
+fi

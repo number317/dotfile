@@ -37,7 +37,7 @@ filetype plugin on
 " set guifont=Schumacher\ Clean\ 10
 set guifont=Monospace\ 10
 set guifontwide=WenQuanYi_Micro_Hei_Mono\ 10
-colorscheme typewrite
+colorscheme gruvbox
 set background=dark
 
 function! ToggleGUICruft()
