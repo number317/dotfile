@@ -1,6 +1,6 @@
 Xft.dpi: 192
 XTerm.VT100.utf8: 1
-XTerm.VT100.termName: xterm-256color
+XTerm.VT100.termName: xterm-256color-italic
 XTerm.VT100.locale: true
 
 !! Cursor
@@ -11,10 +11,7 @@ XTerm*VT100.cursorUnderline: false
 !! Pointer
 XTerm*VT100*pointerBlank: true
 
-
-!xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName: xterm-256color
-xterm*eightBitInput: false
+XTerm*VT100*eightBitInput: false
 
 !===================================================================
 !BLK Cursor
@@ -46,8 +43,10 @@ xterm*eightBitInput: false
 #define _colorUL       #ffffff
 #define _colorIT       #ffffff
 !TXT Normal, Normal, Cursor
-#define _foreground    #f8f8f2
-#define _background    #2b3e50
+#define _foreground_solar    #f8f8f2
+#define _background_solar    #2b3e50
+#define _foreground_gruvbox  #ffd7af
+#define _background_gruvbox  #262626
 #define _cursorColor   #e3bf21
 XTerm.VT100.color0         : _color0
 XTerm.VT100.color1         : _color1
@@ -68,8 +67,8 @@ XTerm.VT100.color15        : _color15
 XTerm.VT100.colorBD        : _colorBD
 XTerm.VT100.colorIT        : _colorIT
 XTerm.VT100.colorUL        : _colorUL
-!XTerm.VT100.foreground     : _foreground
-!XTerm.VT100.background     : _background
+XTerm.VT100.foreground     : _foreground_gruvbox
+XTerm.VT100.background     : _background_gruvbox
 XTerm.VT100.cursorColor    : _cursorColor
 
 

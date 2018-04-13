@@ -25,4 +25,4 @@ ln -sfv "$PWD/myscript" "$HOME/.local/usr/bin"
 
 sudo ln -sfv "$PWD/pacman.conf" "/etc/pacman.conf"
 
-sudo ln -sfv "$PWD/xorg.conf.d/70-synaptics.conf" "/etc/X11/xorg.conf.d/70-synaptics.conf"
+sudo ln -sfv "$PWD/xorg.conf.d/40-libinput.conf" "/usr/share/X11/xorg.conf.d/40-libinput.conf"
