@@ -11,6 +11,12 @@ fi
 alias ls='ls --color'
 set -o vi
 export PATH=$PATH:$HOME/.local/usr/bin/
-export PS1="\[$(tput bold)\]\[\033[38;5;44m\]=> \[$(tput sgr0)\]"
-export PS2="\[$(tput bold)\]\[\033[38;5;44m\]> \[$(tput sgr0)\]"
+if [ $UID == "0" ]; then
+    symbol="\[\e[31;1m\]=> \[\e[0m\]";
+else
+    symbol="\[\e[34;1m\]=> \[\e[0m\]"
+fi
+
+export PS1="$symbol"
+export PS2=">"
 export EDITOR=vim

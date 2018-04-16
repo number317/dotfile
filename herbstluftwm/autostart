@@ -11,7 +11,7 @@ hc emit_hook reload
 xsetroot -solid '#5A8E3A'
 
 feh --randomize --bg-fill /home/cheon/Pictures/wallpaper/*
-compton -bc --active-opacity 1.0 --inactive-opacity 0.9 -I 0.03 -O 0.05 -D 20
+compton -bc --active-opacity 0.9 --inactive-opacity 0.8 -I 0.03 -O 0.05 -D 20
 
 # remove all existing keybindings
 hc keyunbind --all
