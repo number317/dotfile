@@ -1,4 +1,4 @@
-Xft.dpi: 192
+!Xft.dpi: 176
 XTerm.VT100.utf8: 1
 XTerm.VT100.termName: xterm-256color-italic
 XTerm.VT100.locale: true

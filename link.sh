@@ -1,6 +1,8 @@
 #!/bin/bash
 ln -sfv "$PWD/herbstluftwm" "$HOME/.config"
 
+ln -sfv "$PWD/zathura" "$HOME/.config"
+
 ln -sfv "$PWD/ranger" "$HOME/.config"
 
 ln -sfv "$PWD/gtk-3.0" "$HOME/.config"
