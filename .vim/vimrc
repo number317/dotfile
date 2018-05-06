@@ -114,9 +114,9 @@ function! File_size(f)
         return printf('%.1f', l:size/1024.0/1024.0/1024.0) . 'g'
     endif
 endfunction
-set statusline+=\ size:%{File_size(@%)}\
-set statusline+=\ %f\
-set statusline+=\ %m%r%y\
+set statusline+=\ size:%{File_size(@%)}
+set statusline+=\ %f
+set statusline+=\ %m%r%y
 set statusline+=%=\ %{&ff}\ \|\ %{\"\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"\ \|\"}\ %-14.(%l:%c%V%)
-set statusline+=\ %P\
+set statusline+=\ %P
 set laststatus=2

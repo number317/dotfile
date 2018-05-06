@@ -1,0 +1,52 @@
+!!basic
+URxvt*termName: rxvt-unicode-256color
+
+!!color
+URxvt.depth:32
+
+!!input
+URxvt.preeditType:OffTheSpot
+URxvt.inputMethod:ibus
+
+!!extension
+URxvt.perl-ext-common:default,matcher
+
+!!keyboard select
+URxvt*keysym.M-Escape: perl:keyboard-select:activate
+URxvt*keysym.C-s: perl:keyboard-select:search
+URxvt*keysym.M-w: perl:clipboard:copy
+URxvt*keysym.C-y: perl:clipboard:paste
+
+!!URL
+URxvt.url-launcher:firefox
+URxvt.matcher.button:C1
+URxvt.keysym.M-u:perl:url-select:select_next
+
+!!scroll bar
+URxvt.scrollBar: False
+URxvt.scrollBar_right: False
+URxvt.scrollBar_floating: False
+URxvt.scrollstyle: plain
+
+!!scroll
+URxvt.mouseWheelScrollPage:False
+URxvt.scrollTtyOutput:False
+URxvt.scrollWithBuffer:True
+URxvt.scrollTtyKeypress:True
+URxvt.secondaryScroll: False
+
+!!back/for ground
+URxvt.background: [10]#282828
+
+!!course
+URxvt.cursorBlink:False
+URxvt.saveLines:4096
+
+!!board
+URxvt.borderLess:False
+
+!!font
+URxvt.font:xft:Monospace:antialias=True:style=Regular:pixelsize=22,xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=22
+URxvt.boldfont:xft:Monospace:antialias=True:pixelsize=22,xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=22
+
+URxvt.print-pipe: "cat > /dev/null"

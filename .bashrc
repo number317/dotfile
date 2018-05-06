@@ -42,6 +42,7 @@ fi
 export PS1="$symbol"
 export PS2=">"
 export EDITOR=vim
+export TERMINAL=urxvt
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus

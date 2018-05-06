@@ -1,0 +1,27 @@
+XTerm.VT100.utf8: 1
+XTerm.VT100.termName: xterm-256color-italic
+XTerm.VT100.locale: true
+
+!! Cursor
+XTerm*VT100.cursorBlink: false
+XTerm*VT100.cursorUnderline: false
+
+!! Pointer
+XTerm*VT100*pointerBlank: true
+
+XTerm.VT100.faceName: Monospace:style=Regular:antialias=True:pixelsize=22
+XTerm.VT100.faceNameDoublesize: WenQuanYi Micro Hei:style:Regular:antialias=True:pixelsize=22
+XTerm.VT100.inputMethod: ibus
+XTerm.VT100.allowBoldFonts: true
+XTerm.VT100.scaleHeight: 1.01
+XTerm.VT100.eightBitInput: false
+XTerm.VT100.metaSendsEscape: true
+XTerm.VT100.backarrowKey: false
+XTerm.VT100.ttyModes: erase ^?
+XTerm.VT100.saveLines: 4096
+XTerm.VT100.borderWidth: 0
+
+XTerm.VT100.Translations: #override \n\
+        Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+        Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+        Shift <Btn1Up>: exec-formatted("firefox '%t'", PRIMARY)
