@@ -21,8 +21,9 @@ set magic
 set autoindent
 set fdm=marker
 set ruler
-set cursorline
-set cursorcolumn
+" cursorline and cursorcolumn may cause vim slow
+" set cursorline
+" set cursorcolumn
 set showcmd
 set hlsearch
 set cindent

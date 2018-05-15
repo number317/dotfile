@@ -36,5 +36,6 @@ xsetroot -cursor_name left_ptr &
 xset s 60
 xset dpms 60 1800 3600
 xautolock -time 1 -locker slock &
-syndaemon -i 1 -d -K -R 
+syndaemon -i 1 -d -K -R
+urxvtd -q -f -o
 exec herbstluftwm --lock

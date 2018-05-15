@@ -1,2 +1,35 @@
 #!/bin/sh
-xrandr --output HDMI1 --mode 2560x1440 --pos 3840x720 --rotate normal --output VIRTUAL1 --off --output eDP1 --primary --mode 3840x2160 --pos 0x0 --rotate normal
+#
+# This script used to set two monitor
+# arg: left or normal
+
+get_resolution(){
+    monitors=$(xrandr | grep " connected " | wc -l)
+    if [[ $monitors = 2 ]]; then
+        temp=$(xrandr | grep \+ | grep -v connected | awk '{print $1}' | tr 'x' ' ')
+        eval $1=$(echo $temp | cut -d' ' -f 1)
+        eval $2=$(echo $temp | cut -d' ' -f 2)
+        eval $3=$(echo $temp | cut -d' ' -f 3)
+        eval $4=$(echo $temp | cut -d' ' -f 4)
+        return 0
+    else
+        echo "monitors not equals to 2" >&2
+        return 1
+    fi
+}
+
+main(){
+    declare mode=$1
+    get_resolution primary_x primary_y external_x external_y
+    if [[ $? -eq 0 ]]; then
+        if [[ "$primary_y" -ge "$external_y" ]]; then
+           declare pos1=0x0 pos2="$primary_x"x$((primary_y-external_y))
+        else
+           declare pos1=0x$((external_y-primary_y)) pos2="$primary_x"x$((external_y-primary_y))
+        fi
+
+        xrandr --output HDMI1 --mode "$external_x"x"$external_y" --pos "$pos2" --rotate "${mode}" --output VIRTUAL1 --off --output eDP1 --primary --mode "$primary_x"x"$primary_y" --pos $pos1 --rotate normal
+    fi
+}
+
+main $1
