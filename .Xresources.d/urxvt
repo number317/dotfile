@@ -1,3 +1,4 @@
+! vi: set ft=xdefaults :
 !!basic
 URxvt*termName: rxvt-unicode
 
@@ -35,7 +36,7 @@ URxvt.mouseWheelScrollPage: False
 URxvt.scrollTtyOutput: False
 URxvt.scrollWithBuffer: False
 URxvt.scrollTtyKeypress: True
-URxvt.secondaryScroll: False
+URxvt.secondaryScroll: True
 
 !!back/fore ground
 URxvt.background: [60]#282828
