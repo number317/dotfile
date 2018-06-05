@@ -20,7 +20,7 @@ ln -sfv "$PWD/.nethackrc" "$HOME/.nethackrc"
 ln -sfv "$PWD/.xinitrc" "$HOME/.xinitrc"
 
 ln -sfv "$PWD/.Xresources" "$HOME/.Xresources"
-ln -sfv "$PWD/.Xresources.d" "$HOME/.Xresources.d"
+ln -sfv "$PWD/.Xresources.d" "$HOME/"
 
 mkdir -p "$HOME/.local/usr/"
 rm -rf "$HOME/.local/usr/bin"
