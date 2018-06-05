@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -Ss "https://store.docker.com/api/content/v1/repositories/public/library/$@/tags?page_size=25&page=1" | jq '."results"[]["name"]' | sort -r
