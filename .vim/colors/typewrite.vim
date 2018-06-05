@@ -13,7 +13,7 @@ hi Cursor                                   guibg=#00BAFF
 hi Normal          ctermfg=235 ctermbg=255  guifg=#424242 guibg=#EEEEEE
 hi Title           ctermfg=235 ctermbg=255  guifg=#424242 guibg=#EEEEEE term=bold   cterm=bold   gui=bold
 hi Special         ctermfg=234 ctermbg=NONE guifg=#1C1C1C guibg=NONE
-hi Comment         ctermfg=247 ctermbg=NONE guifg=#9E9E9E guibg=NONE    term=italic cterm=italic gui=italic
+hi Comment         ctermfg=247 ctermbg=NONE guifg=#9E9E9E guibg=NONE    term=italic cterm=NONE gui=italic
 hi Constant        ctermfg=237 ctermbg=NONE guifg=#3A3A3A guibg=NONE
 hi String          ctermfg=246 ctermbg=NONE guifg=#949494 guibg=NONE
 hi Number          ctermfg=234 ctermbg=NONE guifg=#1C1C1C guibg=NONE
@@ -23,11 +23,11 @@ hi Statement       ctermfg=242 ctermbg=NONE guifg=#6C6C6C guibg=NONE cterm=NONE
 hi Boolean         ctermfg=242 ctermbg=NONE guifg=#6C6C6C guibg=NONE cterm=NONE
 hi PreProc         ctermfg=244 ctermbg=NONE guifg=#808080 guibg=NONE
 hi Type            ctermfg=239 ctermbg=NONE guifg=#4E4E4E guibg=NONE
-hi Function        ctermfg=240 ctermbg=NONE guifg=#585858 cterm=italic gui=italic
+hi Function        ctermfg=240 ctermbg=NONE guifg=#585858 cterm=NONE gui=italic
 hi Repeat          ctermfg=244 ctermbg=NONE guifg=#808080 guibg=NONE
 hi Operator        ctermfg=239 ctermbg=NONE guifg=#4E4E4E guibg=NONE
 hi Error           ctermfg=9   ctermbg=NONE guifg=#FF0000 guibg=NONE
-hi TODO            ctermfg=135 ctermbg=NONE guifg=#AF5FFF guibg=NONE cterm=italic gui=italic
+hi TODO            ctermfg=135 ctermbg=NONE guifg=#AF5FFF guibg=NONE cterm=NONE gui=italic
 hi linenr          ctermfg=250 ctermbg=255  guifg=#BCBCBC term=bold cterm=NONE
 hi CursorLine      ctermfg=235 ctermbg=NONE guifg=#262626 guibg=NONE
 hi CursorLineNR    ctermfg=232 ctermbg=255  guifg=#080808 term=bold cterm=bold gui=bold
@@ -39,7 +39,7 @@ hi WildMenu        ctermfg=235 ctermbg=255  guifg=#424242 guibg=#EEEEEE
 hi ModeMsg         ctermfg=235 ctermbg=255  guifg=#424242 guibg=#EEEEEE
 hi MoreMsg         ctermfg=235 ctermbg=255  guifg=#424242 guibg=#EEEEEE
 hi WarningMsg      ctermfg=202 ctermbg=255  guifg=#FF5F00 guibg=#EEEEEE
-hi ErrorMsg        ctermfg=197 ctermbg=255  guifg=#E41D91 guibg=#EEEEEE cterm=italic gui=italic
+hi ErrorMsg        ctermfg=197 ctermbg=255  guifg=#E41D91 guibg=#EEEEEE cterm=NONE gui=italic
 
 hi Visual          ctermfg=235 ctermbg=153  guifg=#424242 guibg=#C1E7F4
 hi SpecialKey      ctermfg=255 ctermbg=NONE
@@ -120,8 +120,8 @@ hi htmlEndTag   ctermfg=246 ctermbg=NONE guifg=#949494 guibg=NONE
 hi link cssBraces	Special
 
 " go (ala vim-go)
-hi gotypes     ctermfg=208 ctermbg=NONE cterm=italic gui=italic
-hi goDirective ctermfg=242 ctermbg=NONE guifg=#6C6C6C cterm=italic gui=italic
+hi gotypes     ctermfg=208 ctermbg=NONE cterm=NONE gui=italic
+hi goDirective ctermfg=242 ctermbg=NONE guifg=#6C6C6C cterm=NONE gui=italic
 
 hi link goTodo         TODO
 hi link goType         gotypes
@@ -135,10 +135,10 @@ hi goBuiltins    ctermfg=70
 hi goDeclaration ctermfg=242 guifg=#6C6C6C
 hi goDeclType    ctermfg=242 guifg=#6C6C6C
 
-hi goFunction  ctermfg=242 ctermbg=NONE guifg=#6C6C6C cterm=italic gui=italic
+hi goFunction  ctermfg=242 ctermbg=NONE guifg=#6C6C6C cterm=NONE gui=italic
 hi goMethod    ctermfg=242 ctermbg=NONE guifg=#6C6C6C cterm=NONE
 hi goStruct    ctermfg=235 ctermbg=NONE guifg=#424242 cterm=NONE
-hi goStructDef ctermfg=235 ctermbg=NONE guifg=#424242 cterm=italic gui=italic
+hi goStructDef ctermfg=235 ctermbg=NONE guifg=#424242 cterm=NONE gui=italic
 
 
 " NerdTree

@@ -39,10 +39,13 @@ URxvt.scrollTtyKeypress: True
 URxvt.secondaryScroll: True
 
 !!back/fore ground
-URxvt.background: [60]#282828
+!!URxvt.background: [60]#282828
+URxvt.background: [80]#FFFFFF
+URxvt.foreground: #000000
 
 !!course
 URxvt.cursorBlink: False
+URxvt.cursorColor: #70AA39
 URxvt.saveLines: 4096
 
 !!board

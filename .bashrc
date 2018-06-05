@@ -31,6 +31,14 @@ man() {
     command man "$@"
 }
 
+ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/bin/ranger "$@"
+    else
+        exit
+    fi
+}
+
 set -o vi
 export PATH=$PATH:$HOME/.local/usr/bin/
 if [ $UID == "0" ]; then
