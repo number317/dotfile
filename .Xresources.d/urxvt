@@ -39,9 +39,7 @@ URxvt.scrollTtyKeypress: True
 URxvt.secondaryScroll: True
 
 !!back/fore ground
-!!URxvt.background: [60]#282828
-URxvt.background: [80]#FFFFFF
-URxvt.foreground: #000000
+URxvt.background: [60]#282828
 
 !!course
 URxvt.cursorBlink: False
@@ -54,10 +52,10 @@ URxvt.internalBorder: 0
 URxvt.externalBorder: 0
 
 !!font
-URxvt.font: xft:Monospace:antialias=True:style=Regular:pixelsize=22, \
-                                   xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=22
-URxvt.boldfont: xft:Monospace:antialias=True:pixelsize=22, \
-                                        xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=22
+URxvt.font: xft:Monospace:antialias=True:style=Regular:pixelsize=12, \
+                                   xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=12
+URxvt.boldfont: xft:Monospace:antialias=True:pixelsize=12, \
+                                        xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=12
 
 !!tab
 !!URxvt.tabbed.tabbar-fg: 2

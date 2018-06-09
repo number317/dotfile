@@ -1,7 +1,8 @@
 @define-color simple_bg #ffffff;
 @define-color molokai_bg #1b1d1e;
 @define-color solarized_bg #002b36;
+@define-color gruvbox_bg #282828;
 
 window#vim-main-window {
-    background-color: @solarized_bg;
+    background-color: @gruvbox_bg;
 }
