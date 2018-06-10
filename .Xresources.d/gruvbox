@@ -21,9 +21,9 @@
 *.scrollColor:              #234567
 *.throughColor:             #345678
 *.highlightColor:           #456789
-!!*.highlightTextColor:       #567890
+! *.highlightTextColor:       #567890
 *.cursorColor:              #67890a
 *.cursorColor2:             #7890ab
 *.pointerColor:             #890abc
 *.pointerColor2:            #90abcd
-!!*.borderColor:              #0abcde
+! *.borderColor:              #0abcde
