@@ -83,6 +83,7 @@ set shiftwidth=4
 set shortmess=atI
 set novisualbell
 set guiheadroom=0
+set termwinsize="30x0"
 filetype plugin indent on
 " set guifont=Schumacher\ Clean\ 10
 set guifont=Monospace\ 10
@@ -146,6 +147,7 @@ function QuoteDelim(char)
 endf
 "}}}
 
+"{{{ statusline config
 function! Buf_total_num()
     return len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
 endfunction
@@ -170,7 +172,7 @@ set statusline+=\ %m%r%y
 set statusline+=%=\ %{&ff}\ \|\ %{\"\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"\ \|\"}\ %-14.(%l:%c%V%)
 set statusline+=\ %P
 set laststatus=2
-
+"}}}
 
 "{{{ ycm config
 set completeopt=longest,menu	"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -188,7 +190,7 @@ nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>	"force recomile with syntastic
 " nnoremap <leader>lc :lclose<CR>	"close locationlist
 inoremap <leader><leader> <C-x><C-o>
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/data/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " 不显示开启vim时检查ycm_extra_conf文件的信息
 let g:ycm_confirm_extra_conf=1
 " 开启基于tag的补全，可以在这之后添加需要的标签路径
