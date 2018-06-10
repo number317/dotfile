@@ -16,6 +16,7 @@ runtime! archlinux.vim
 syntax on
 set backspace=2
 set t_Co=256
+" set termguicolors
 set nu
 set magic
 set autoindent
@@ -26,7 +27,8 @@ set ruler
 " set cursorcolumn
 set showcmd
 set hlsearch
-set cindent
+" cindent may cause err indent when block insert"
+"set cindent
 set tabstop=4
 set expandtab
 set softtabstop=4
@@ -38,8 +40,8 @@ filetype plugin on
 " set guifont=Schumacher\ Clean\ 10
 set guifont=Monospace\ 10
 set guifontwide=WenQuanYi_Micro_Hei_Mono\ 10
-set background=light
-colorscheme typewrite
+set background=dark
+colorscheme gruvbox
 
 function! ToggleGUICruft()
     if &guioptions=='i'
