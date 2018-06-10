@@ -3,4 +3,4 @@ ranger/bookmarks
 ranger/tagged
 .vim/swap
 .vim/.netrwhist
-.vim/bundle
+.vim/plugged

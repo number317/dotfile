@@ -13,8 +13,6 @@ ln -sfv "$PWD/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
 
 ln -sfv "$PWD/.mplayer" "$HOME/"
 
-mkdir -p .vim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git ./.vim/bundle/Vundle.vim
 ln -sfv "$PWD/.vim" "$HOME/"
 
 ln -sfv "$PWD/.nethackrc" "$HOME/.nethackrc"
