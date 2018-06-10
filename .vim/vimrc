@@ -63,6 +63,7 @@ runtime! archlinux.vim
 syntax on
 set backspace=2
 set t_Co=256
+" set termguicolors
 set nu
 set magic
 set autoindent
@@ -73,7 +74,8 @@ set ruler
 " set cursorcolumn
 set showcmd
 set hlsearch
-" set cindent
+" cindent may cause err indent when block insert"
+"set cindent
 set tabstop=4
 set expandtab
 set softtabstop=4
@@ -216,7 +218,7 @@ let g:ycm_key_invoke_completion = '<M-;>'
 "}}}
 
 "{{{ NERDTree config
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
