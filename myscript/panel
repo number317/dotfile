@@ -9,10 +9,11 @@ date_fmt='   %a %b %d %H:%M'
 interval=15
 
 font_name='WenQuanYi Micro Hei Mono'
-font_height=8
+font_height=16
 font_width=$((font_height - (font_height / 4)))
 
 hc='herbstclient'
+$hc pad 0 28
 declare -A tag_colors=(
     [':']=$($hc get frame_border_active_color)
     ['#']=$($hc get window_border_active_color)
@@ -29,6 +30,7 @@ dzen=(
 
 ## Functions ##
 cleanup () {
+    herbstclient pad 0 0
     exec 9<&-
     rm "$io" 2>/dev/null
     kill $(jobs -p) 2>/dev/null
@@ -60,7 +62,7 @@ update_stats () {
                 batt)
                     s=$(battery) ;;
                 temp)
-                    s=$(screenfetch|grep -oP "[0-9]*\.[0-9]*°C") ;;
+                    s=$(neofetch --cpu_temp|grep -oP "[0-9]*\.[0-9]*°C") ;;
                 *)
                     continue ;;
             esac

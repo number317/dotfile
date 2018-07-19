@@ -1,6 +1,5 @@
 #!/bin/bash
-curl http://dict.youdao.com/w/eng/$1/#keyfrom=dict2.index 2>/dev/null | 
-head -n 300 |
-grep -oP "(?<=<li>).*(?=<\/li>)" |
-grep -v "<a" |
-grep -v "<span"
+content=$(curl http://dict.youdao.com/w/eng/$1/#keyfrom=dict2.index 2>/dev/null | head -n 300)
+
+echo -en "\e[35;1mUK\e[0m: "; echo "$content" | grep -v "def" | grep --color -oP -m 1 "(?<=<span class=\"phonetic\">).*(?=<\/span>)"
+echo "$content" | grep -v "def" | grep --color -oP "(?<=<li>).*(?=<\/li>)"

@@ -52,10 +52,10 @@ URxvt.internalBorder: 0
 URxvt.externalBorder: 0
 
 !!font
-URxvt.font: xft:Monospace:antialias=True:style=Regular:pixelsize=12, \
-                                   xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=12
-URxvt.boldfont: xft:Monospace:antialias=True:pixelsize=12, \
-                                        xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=12
+URxvt.font: xft:Monospace:antialias=True:style=Regular:pixelsize=22, \
+                                   xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=22
+URxvt.boldfont: xft:Monospace:antialias=True:pixelsize=22, \
+                                        xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=22
 
 !!tab
 !!URxvt.tabbed.tabbar-fg: 2
