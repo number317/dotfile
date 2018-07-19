@@ -4,3 +4,4 @@ ranger/tagged
 .vim/swap
 .vim/.netrwhist
 .vim/plugged
+herbstluftwm/dconf
