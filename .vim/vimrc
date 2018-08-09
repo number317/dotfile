@@ -44,8 +44,8 @@ set guiheadroom=0
 set termwinsize="25*0"
 filetype plugin indent on
 " set guifont=Schumacher\ Clean\ 10
-set guifont=Monospace\ 16
-set guifontwide=WenQuanYi_Micro_Hei_Mono\ 16
+set guifont=SF\ Mono\ 16
+set guifontwide=.PingFang\ SC\ 16
 set background=dark
 colorscheme gruvbox
 

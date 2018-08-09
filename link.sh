@@ -5,6 +5,8 @@ ln -sfv "$PWD/zathura" "$HOME/.config"
 
 ln -sfv "$PWD/ranger" "$HOME/.config"
 
+ln -sfv "$PWD/fontconfig" "$HOME/.config"
+
 ln -sfv "$PWD/gtk-3.0" "$HOME/.config"
 
 ln -sfv "$PWD/.bashrc" "$HOME/.bashrc"

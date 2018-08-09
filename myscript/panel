@@ -8,12 +8,12 @@ clock=1
 date_fmt='   %a %b %d %H:%M'
 interval=15
 
-font_name='WenQuanYi Micro Hei Mono'
+font_name='PingFang SC'
 font_height=16
 font_width=$((font_height - (font_height / 4)))
 
 hc='herbstclient'
-$hc pad 0 28
+$hc pad 0 30
 declare -A tag_colors=(
     [':']=$($hc get frame_border_active_color)
     ['#']=$($hc get window_border_active_color)

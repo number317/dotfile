@@ -34,7 +34,7 @@ URxvt.scrollColor: [80]#282828
 !!scroll
 URxvt.mouseWheelScrollPage: False
 URxvt.scrollTtyOutput: False
-URxvt.scrollWithBuffer: False
+URxvt.scrollWithBuffer: True
 URxvt.scrollTtyKeypress: True
 URxvt.secondaryScroll: True
 
@@ -52,10 +52,10 @@ URxvt.internalBorder: 0
 URxvt.externalBorder: 0
 
 !!font
-URxvt.font: xft:Monospace:antialias=True:style=Regular:pixelsize=22, \
-                                   xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=22
-URxvt.boldfont: xft:Monospace:antialias=True:pixelsize=22, \
-                                        xft:WenQuanYi Micro Hei:antialias=True:style=Regular:pixelsize=22
+URxvt.font:xft:SF Mono:antialias=True:style=Regular:size=16,xft:PingFang SC Regular:antialias=True:style=Regular:size=16
+URxvt.boldFont:xft:SF Mono:antialias=True:style=Bold:size=16,xft:PingFang SC Bold:antialias=True:style=Bold:size=16
+URxvt.italicFont:xft:SF Mono:antialias=True:style=Regular Italic:size=16,xft:PingFang SC Light:antialias=True:style=Light:size=16
+URxvt.boldItalicFont:xft:SF Mono:antialias=True:style=Bold Italic Italic:size=16,xft:PingFang SC Medium:antialias=True:style=Medium:size=16
 
 !!tab
 !!URxvt.tabbed.tabbar-fg: 2
