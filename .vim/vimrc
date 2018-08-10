@@ -46,8 +46,7 @@ filetype plugin indent on
 " set guifont=Schumacher\ Clean\ 10
 set guifont=SF\ Mono\ 16
 set guifontwide=.PingFang\ SC\ 16
-set background=dark
-colorscheme gruvbox
+colorscheme typewrite
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yaml setl indentkeys-=<:>

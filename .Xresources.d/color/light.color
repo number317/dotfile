@@ -1,0 +1,29 @@
+! vi: set ft=xdefaults :
+
+URxvt.depth: 32
+URxvt.background: white
+URxvt.foreground: black
+
+URxvt.color0: #D0D0D0
+URxvt.color8: #737373
+URxvt.color1: #D7005F
+URxvt.color9: #D7005F
+URxvt.color2: #718C00
+URxvt.color10: #718C00
+URxvt.color3: #D75F00
+URxvt.color11: #D75F00
+URxvt.color4: #4271AE
+URxvt.color12: #4271AE
+URxvt.color5: #8959A8
+URxvt.color13: #8959A8
+URxvt.color6: #3E999F
+URxvt.color14: #3E999F
+URxvt.color7: #4D4D4C
+URxvt.color15: #F5F5F5
+URxvt.underlineColor: #123456
+URxvt.throughColor: #345678
+URxvt.highlightColor: #A1C7EC
+URxvt.cursorColor: #70AA39
+URxvt.cursorColor2: #7890AB
+URxvt.pointerColor: #890ABC
+URxvt.pointerColor2: #90ABCD

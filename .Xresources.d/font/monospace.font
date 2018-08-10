@@ -1,0 +1,10 @@
+! vi: set ft=xdefaults :
+
+!!font
+URxvt.font: xft:monospace:antialias=True:style=Regular:size=16,xft:PingFang SC Regular:antialias=True:style=Regular:size=16
+URxvt.boldFont: xft:monospace:antialias=True:style=Bold:size=16,xft:PingFang SC Bold:antialias=True:style=Bold:size=16
+URxvt.italicFont: xft:monospace:antialias=True:style=Regular Italic:size=16,xft:PingFang SC Light:antialias=True:style=Light:size=16
+URxvt.boldItalicFont: xft:monospace:antialias=True:style=Bold Italic Italic:size=16,xft:PingFang SC Medium:antialias=True:style=Medium:size=16
+
+!!without this, urxvt will exist a border on the right? But whitthis, there will be border at the bottom.
+URxvt.letterSpace: -2

@@ -2,9 +2,6 @@
 !!basic
 URxvt*termName: rxvt-unicode
 
-!!color
-URxvt.depth: 32
-
 !!input
 URxvt.preeditType: OffTheSpot
 URxvt.inputMethod: ibus
@@ -38,24 +35,14 @@ URxvt.scrollWithBuffer: True
 URxvt.scrollTtyKeypress: True
 URxvt.secondaryScroll: True
 
-!!back/fore ground
-URxvt.background: [60]#282828
-
 !!course
 URxvt.cursorBlink: False
-URxvt.cursorColor: #70AA39
 URxvt.saveLines: 4096
 
 !!board
 URxvt.borderLess: False
 URxvt.internalBorder: 0
 URxvt.externalBorder: 0
-
-!!font
-URxvt.font:xft:SF Mono:antialias=True:style=Regular:size=16,xft:PingFang SC Regular:antialias=True:style=Regular:size=16
-URxvt.boldFont:xft:SF Mono:antialias=True:style=Bold:size=16,xft:PingFang SC Bold:antialias=True:style=Bold:size=16
-URxvt.italicFont:xft:SF Mono:antialias=True:style=Regular Italic:size=16,xft:PingFang SC Light:antialias=True:style=Light:size=16
-URxvt.boldItalicFont:xft:SF Mono:antialias=True:style=Bold Italic Italic:size=16,xft:PingFang SC Medium:antialias=True:style=Medium:size=16
 
 !!tab
 !!URxvt.tabbed.tabbar-fg: 2
@@ -64,8 +51,5 @@ URxvt.boldItalicFont:xft:SF Mono:antialias=True:style=Bold Italic Italic:size=16
 !!URxvt.tabbed.tab-bg: [80]#282828
 
 URxvt.print-pipe: "cat > /dev/null"
-
-!!without this, urxvt will exist a border on the right???
-URxvt.letterSpace: -1
 
 URxvt*skipBuiltinGlyphs: true

@@ -5,3 +5,5 @@ ranger/tagged
 .vim/.netrwhist
 .vim/plugged
 herbstluftwm/dconf
+herbstluftwm/ibus
+herbstluftwm/dconf

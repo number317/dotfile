@@ -1,5 +1,5 @@
 # Write your default config options here!
 subcp = "utf-8"
 fontconfig=0
-font = "/usr/share/fonts/wenquanyi/wqy-microhei/wqy-microhei.ttc"
+font = "/usr/share/fonts/pingfang-sc/PingFang Regular.ttf"
 subfont-text-scale = "2.000000"
