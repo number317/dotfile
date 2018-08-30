@@ -42,13 +42,13 @@ ranger() {
 set -o vi
 export PATH=$PATH:$HOME/.local/usr/bin/
 if [ $UID == "0" ]; then
-    symbol="\[\e[31;1m\]=> \[\e[0m\]";
+    symbol="\[\e[31;1m\]»» \[\e[0m\]";
 else
-    symbol="\[\e[34;1m\]=> \[\e[0m\]"
+    symbol="\[\e[34;1m\]»» \[\e[0m\]"
 fi
 
 export PS1="$symbol"
-export PS2=">"
+export PS2="→ "
 export EDITOR=vim
 export TERMINAL=urxvtc
 export GTK_IM_MODULE=ibus

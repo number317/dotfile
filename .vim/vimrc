@@ -133,8 +133,8 @@ function! LinterStatus() abort
     let l:all_errors = l:counts.error + l:counts.style_error
     let l:all_non_errors = l:counts.total - l:all_errors
 
-    return l:counts.total == 0 ? 'OK' : printf(
-    \   '%dW %dE',
+    return l:counts.total == 0 ? '✓' : printf(
+    \   '%d! %d✗',
     \   all_non_errors,
     \   all_errors
     \)
@@ -205,11 +205,14 @@ let g:ale_lint_delay = 500
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
+let g:ale_sign_error = '✗✗'
+let g:ale_sign_warning = '!!'
+let g:ale_linters = {
+\   'c': ['gcc'],
+\   'c++': ['gcc'],
+\}
 
-let g:ale_c_gcc_options = '-Wall -O2 -std=c11'
-let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
-let g:ale_c_cppcheck_options = ''
-let g:ale_cpp_cppcheck_options = ''
+let g:ale_c_gcc_options = '-Wall -O2 -std=gnu11'
 
 hi! clear SpellBad
 hi! clear SpellCap

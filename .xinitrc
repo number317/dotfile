@@ -32,7 +32,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-xsetroot -cursor_name left_ptr &
 xset s 60
 xset dpms 60 1800 3600
 xautolock -time 1 -locker slock &
