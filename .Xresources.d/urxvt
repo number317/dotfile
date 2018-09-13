@@ -1,19 +1,25 @@
 ! vi: set ft=xdefaults :
 !!basic
 URxvt*termName: rxvt-unicode
+URxvt.secondaryScreen: 1
 
 !!input
 URxvt.preeditType: OffTheSpot
 URxvt.inputMethod: ibus
 
 !!extension
-URxvt.perl-ext-common: default
+URxvt.perl-ext-common: default,matcher,eval
 
 !!keyboard select
 URxvt*keysym.M-Escape: perl:keyboard-select:activate
 URxvt*keysym.C-s: perl:keyboard-select:search
 URxvt*keysym.M-w: perl:clipboard:copy
 URxvt*keysym.C-y: perl:clipboard:paste
+
+URxvt.keysym.M-c: eval:selection_to_clipboard
+URxvt.keysym.M-v: eval:paste_clipboard
+URxvt.keysym.M-V: eval:paste_primary
+
 
 !!URL
 URxvt.url-launcher: firefox
@@ -32,7 +38,7 @@ URxvt.mouseWheelScrollPage: False
 URxvt.scrollTtyOutput: False
 URxvt.scrollWithBuffer: True
 URxvt.scrollTtyKeypress: True
-URxvt.secondaryScroll: True
+URxvt.secondaryScroll: 0
 
 !!course
 URxvt.cursorBlink: False
@@ -44,10 +50,10 @@ URxvt.internalBorder: 0
 URxvt.externalBorder: 0
 
 !!tab
-!!URxvt.tabbed.tabbar-fg: 2
-!!URxvt.tabbed.tabbar-bg: [60]#282828
-!!URxvt.tabbed.tab-fg: 3
-!!URxvt.tabbed.tab-bg: [80]#282828
+! URxvt.tabbed.tabbar-fg: 2
+! URxvt.tabbed.tabbar-bg: 0
+! URxvt.tabbed.tab-fg: 3
+! URxvt.tabbed.tab-bg: 0
 
 URxvt.print-pipe: "cat > /dev/null"
 

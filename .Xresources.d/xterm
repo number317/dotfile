@@ -13,7 +13,7 @@ XTerm.VT100.faceName: SF Mono:style=Regular:antialias=True:pixelsize=20
 XTerm.VT100.faceNameDoublesize: PingFang SC Regular:style:Regular:antialias=True:pixelsize=20
 XTerm.VT100.inputMethod: ibus
 XTerm.VT100.allowBoldFonts: true
-XTerm.VT100.scaleHeight: .1.05
+XTerm.VT100.scaleHeight: 1.02
 XTerm.VT100.eightBitInput: false
 XTerm.VT100.metaSendsEscape: true
 XTerm.VT100.backarrowKey: false

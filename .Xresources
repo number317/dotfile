@@ -1,6 +1,6 @@
-!#include ".Xresources.d/xterm"
+! #include ".Xresources.d/xterm"
 #include ".Xresources.d/urxvt"
-#include ".Xresources.d/color/light.color"
+#include ".Xresources.d/color/solarized-light.color"
 #include ".Xresources.d/font/macos.font"
 
 !Xft.dpi: 176

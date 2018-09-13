@@ -7,4 +7,4 @@ URxvt.italicFont: xft:monospace:antialias=True:style=Regular Italic:size=16,xft:
 URxvt.boldItalicFont: xft:monospace:antialias=True:style=Bold Italic Italic:size=16,xft:PingFang SC Medium:antialias=True:style=Medium:size=16
 
 !!without this, urxvt will exist a border on the right? But whitthis, there will be border at the bottom.
-URxvt.letterSpace: -2
+URxvt.letterSpace: -1.01
