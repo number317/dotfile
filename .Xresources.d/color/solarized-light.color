@@ -1,7 +1,9 @@
 ! vi: set ft=xdefaults :
 
-*background: #fdf6e3
-*foreground: #839496
+! *background: #fdf6e3
+! *foreground: #839496
+*background: white
+*foreground: black
 
 *fadeColor: #fdf6e3
 *cursorColor: #586e75

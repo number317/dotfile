@@ -20,9 +20,10 @@ declare -A tag_colors=(
 )
 dzen=(
     dzen2 -ta l -sa l
-    -bg "#121212" #"$($hc get frame_bg_normal_color)"
+    #-bg "#121212" #"$($hc get frame_bg_normal_color)"
+    -bg "#ffffff"
     #-fg "$($hc get frame_bg_active_color)"
-    -fg "#1bb194"
+    -fg "#000000"
     -fn "${font_name}-${font_height}"
     -e "button1=exit;button3=togglehide;button5=exec:$hc use_index -1;button4=exec:$hc use_index +1"
 )
