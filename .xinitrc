@@ -36,5 +36,4 @@ xset s 60
 xset dpms 60 1800 3600
 xautolock -time 1 -locker slock &
 urxvtd -q -f -o
-libinput-gestures-setup start
 exec herbstluftwm --lock

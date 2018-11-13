@@ -25,6 +25,7 @@ hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Return spawn ${TERMINAL:-urxvtc} # use your $TERMINAL with xterm as fallback
+hc keybind Mod1-Tab spawn wselect
 
 # cunstomer keybind
 hc keybind $Mod-d spawn dmenu_run_hlwm

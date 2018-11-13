@@ -9,11 +9,11 @@ XTerm*VT100.cursorUnderline: false
 !! Pointer
 XTerm*VT100*pointerBlank: true
 
-XTerm.VT100.faceName: SF Mono:style=Regular:antialias=True:pixelsize=20
-XTerm.VT100.faceNameDoublesize: PingFang SC Regular:style:Regular:antialias=True:pixelsize=20
+XTerm.VT100.faceName: SF Mono:style=Regular:antialias=True:pixelsize=16
+XTerm.VT100.faceNameDoublesize: PingFang SC Regular:style:Regular:antialias=True:pixelsize=16
 XTerm.VT100.inputMethod: ibus
 XTerm.VT100.allowBoldFonts: true
-XTerm.VT100.scaleHeight: 1.02
+XTerm.VT100.scaleHeight: 1.01
 XTerm.VT100.eightBitInput: false
 XTerm.VT100.metaSendsEscape: true
 XTerm.VT100.backarrowKey: false

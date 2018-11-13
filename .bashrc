@@ -42,10 +42,10 @@ ranger() {
 set -o vi
 export PATH=$PATH:$HOME/.local/usr/bin/
 if [ $UID == "0" ]; then
-    #symbol="\[\e[31;1m\]┌─» #\n\[\e[31;1m\]└──¤ \[\e[0m\]";
+    #symbol="\[\e[31;1m\]╭──»─\n\[\e[31;1m\]╰──¤─\[\e[0m\]";
     symbol="\[\e[31;1m\]»» \[\e[0m\]";
 else
-    #symbol="\[\e[34;1m\]┌─» $\n\[\e[34;1m\]└──¤ \[\e[0m\]"
+    #symbol="\[\e[34;1m\]╭──»─\n\[\e[34;1m\]╰──¤─\[\e[0m\]";
     symbol="\[\e[34;1m\]»» \[\e[0m\]";
 fi
 
