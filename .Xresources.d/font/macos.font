@@ -3,19 +3,19 @@
 !!font
 URxvt.font: xft:SF Mono:antialias=True:style=Regular:size=16:hinting=true,\
             xft:Monospace:antialias=True:style=Regular:size=16:hinting=true,\
-            xft:PingFang SC Regular:antialias=True:style=Regular:size=16:hinting=true
+            xft:.PingFang SC:antialias=True:style=Regular:size=16:hinting=true
 
 URxvt.boldFont: xft:SF Mono:antialias=True:style=Bold:size=16:hinting=true,\
                 xft:Monospace:antialias=True:style=Bold:size=16:hinting=true,\
-                xft:PingFang SC Bold:antialias=True:style=Bold:size=16:hinting=true
+                xft:.PingFang SC:antialias=True:style=Bold:size=16:hinting=true
 
 URxvt.italicFont: xft:SF Mono:antialias=True:style=Regular Italic:size=16:hinting=true,\
                   xft:Monospace:antialias=True:style=Regular Italic:size=16:hinting=true,\
-                  xft:PingFang SC Light:antialias=True:style=Light:size=16:hinting=true
+                  xft:.PingFang SC:antialias=True:style=Light:size=16:hinting=true
 
 URxvt.boldItalicFont: xft:SF Mono:antialias=True:style=Bold Italic Italic:size=16:hinting=true,\
                       xft:Monospace:antialias=True:style=Bold Italic:size=16:hinting=true,\
-                      xft:PingFang SC Medium:antialias=True:style=Medium:size=16:hinting=true
+                      xft:.PingFang SC:antialias=True:style=Medium:size=16:hinting=true
 
 !!without this, urxvt will exist a border on the right???
 URxvt.letterSpace: -2

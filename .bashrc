@@ -58,6 +58,5 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 export QT_SCALE_FACTOR=1.8
 export GDK_SCALE=1.8
-export TERMINAL=urxvtc
 
 export PYTHONPATH=/home/cheon/Docker/python/site-packages
