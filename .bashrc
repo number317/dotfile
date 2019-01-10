@@ -59,4 +59,4 @@ export QT_IM_MODULE=ibus
 export QT_SCALE_FACTOR=1.8
 export GDK_SCALE=1.8
 
-export PYTHONPATH=/home/cheon/Docker/python/site-packages
+export PYTHONPATH=/home/cheon/Codes/dockeraily/python/site-packages

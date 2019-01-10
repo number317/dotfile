@@ -63,7 +63,7 @@ update_stats () {
                 batt)
                     s=$(battery) ;;
                 temp)
-                    s=$(neofetch --cpu_temp|grep -oP "[0-9]*\.[0-9]*°C") ;;
+                    s=$(neofetch --off --cpu_temp|grep -oP "[0-9]*\.[0-9]*°C") ;;
                 *)
                     continue ;;
             esac
