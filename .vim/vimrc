@@ -156,9 +156,8 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_server_log_level = 'info'
-let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_min_num_identifier_candidate_chars = 3
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_complete_in_strings=1
 let g:ycm_key_invoke_completion = '<c-space>'
 let g:ycm_disable_for_files_large_than_kb = 1024
 let g:ycm_complete_in_comments = 1
@@ -213,7 +212,7 @@ let g:ale_linters = {
 \   'c++': ['gcc'],
 \}
 
-let g:ale_c_gcc_options = '-Wall -O2 -std=gnu11'
+let g:ale_c_gcc_options = '-Wall -O2 -std=c11'
 
 hi! clear SpellBad
 hi! clear SpellCap

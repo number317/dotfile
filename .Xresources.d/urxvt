@@ -1,6 +1,6 @@
 ! vi: set ft=xdefaults :
 !!basic
-URxvt*termName: rxvt-unicode
+URxvt*termName: rxvt-256color
 URxvt.secondaryScreen: 1
 
 !!input

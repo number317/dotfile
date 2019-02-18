@@ -108,9 +108,10 @@ statuspanel[type="overLink"],
 }
 
 /* Remove window decorations (Close, Minimize, Fullscreen) */
-#titlebar {
-    display: none !important;
+:root:not([customizing]) #titlebar {
+    visibility: collapse !important;
 }
+
 #TabsToolbar .titlebar-placeholder {
     display: none !important;
 }

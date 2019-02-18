@@ -1,0 +1,61 @@
+! vi: set ft=xdefaults :
+
+! 象牙白 
+*background: #fffef8
+! 灰蓝 
+*foreground: #21373d
+
+! 艾青绿
+*fadeColor: #dfecd5
+! 荷叶绿
+*cursorColor: #1a6840
+*pointerColor: #f2cac9
+
+!! black
+! 钢蓝
+*color8: #0f1423
+! 芦荟灰
+*color0: #bdaead
+
+!! red
+! 赭石
+*color9: #862617
+! 淡绯
+*color1: #f2cac9
+
+!! green
+! 飞泉绿
+*color10: #497568
+! 梧枝绿
+*color2: #69a794
+
+!! yellow
+! 碧螺春绿
+*color11: #867018
+! 葵扇黄
+*color3: #f8d86a
+
+!! blue
+! 苍蓝
+*color12: #134857
+! 湖水蓝
+*color4: #b0d5df
+
+!! magenta
+! 淡蓝紫
+*color13: #a7a8bd
+! 貂紫
+*color5: #5d3131
+
+!! cyan
+! 夏云灰
+*color14: #617172
+! 垩灰
+*color6: #737c7b
+
+!! white
+!云峰白
+*color15: #d8e3e7
+!月白
+*color7: #eef7f2
+
