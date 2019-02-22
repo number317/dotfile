@@ -26,6 +26,7 @@ ln -sfv "$PWD/.vim" "$HOME/"
 ln -sfv "$PWD/.nethackrc" "$HOME/.nethackrc"
 
 ln -sfv "$PWD/.xinitrc" "$HOME/.xinitrc"
+ln -sfv "$PWD/.xinitrc" "$HOME/.nvidia-xinitrc"
 
 ln -sfv "$PWD/.Xresources" "$HOME/.Xresources"
 ln -sfv "$PWD/.Xresources.d" "$HOME/"

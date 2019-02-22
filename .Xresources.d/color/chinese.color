@@ -18,8 +18,8 @@
 *color0: #bdaead
 
 !! red
-! 赭石
-*color9: #862617
+! 茶花红
+*color9: #ee3f4d
 ! 淡绯
 *color1: #f2cac9
 
@@ -42,10 +42,10 @@
 *color4: #b0d5df
 
 !! magenta
+! 姚黄
+*color13: #d0deaa
 ! 淡蓝紫
-*color13: #a7a8bd
-! 貂紫
-*color5: #5d3131
+*color5: #a7a8bd
 
 !! cyan
 ! 夏云灰
