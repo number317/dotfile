@@ -5,11 +5,12 @@
 ! 灰蓝 
 *foreground: #21373d
 
-! 艾青绿
-*fadeColor: #dfecd5
-! 荷叶绿
-*cursorColor: #1a6840
-*pointerColor: #f2cac9
+! 竹绿
+*fadeColor: #1ba784
+! 海王绿
+*cursorColor: #248067
+! 亚丁绿
+*pointerColor: #428675
 
 !! black
 ! 钢蓝

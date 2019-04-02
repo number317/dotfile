@@ -1,3 +1,4 @@
-gtk-icon-theme-name = "Numix"
-gtk-theme-name = "Numix"
-gtk-font-name = "DejaVu Sans 16"
+gtk-icon-theme-name = "Mojave-light"
+gtk-theme-name = "Mojave-light"
+gtk-font-name = "DejaVu Sans16"
+gtk-decoration-layout = "menu,close,maximize,minimize:"

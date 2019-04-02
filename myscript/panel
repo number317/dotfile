@@ -2,21 +2,23 @@
 
 set -f
 
-show=(load:L mem:M batt:B temp:T)
+#show=(load:"^fg(red)L^fg()" mem:"^fg(yellow)M^fg()" batt:"^fg(green)B^fg()" temp:"^fg(blue)T^fg()")
+show=(load:"L" mem:"M" batt:"B" temp:"T")
 sep=':'
 clock=1
 date_fmt='   %a %b %d %H:%M'
 interval=15
 
 font_name='PingFang SC'
-font_height=12
+font_height=16
 font_width=$((font_height - (font_height / 4)))
+pannel_height=27
 
 hc='herbstclient'
-$hc pad 0 27
+$hc pad 0 $pannel_height
 declare -A tag_colors=(
-    [':']=$($hc get frame_border_active_color)
-    ['#']=$($hc get window_border_active_color)
+    [':']="#b0d5df"
+    ['#']="#1ba784"
 )
 dzen=(
     dzen2 -ta l -sa l
@@ -25,6 +27,9 @@ dzen=(
     #-fg "$($hc get frame_bg_active_color)"
     -fg "#000000"
     -fn "${font_name}-${font_height}"
+    -h $pannel_height
+    #-w 1920
+    -y 0
     -e "button1=exit;button3=togglehide;button5=exec:$hc use_index -1;button4=exec:$hc use_index +1"
 )
 

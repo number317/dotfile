@@ -14,14 +14,14 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term xterm
+set $term urxvt
 # Your preferred application launcher
 set $menu dmenu_run
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/cheon/Pictures/wallpaper/wallhaven-70374.jpg fill
+output * bg /home/cheon/Pictures/wallpapers/mountain.jpg fill
 #
 # Example configuration:
 #
@@ -43,7 +43,7 @@ output * bg /home/cheon/Pictures/wallpaper/wallhaven-70374.jpg fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "1739:31251:DLL07BE:01_06CB:7A13_To" {
+input "DLL07BE:01 06CB:7A13 Touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
@@ -52,13 +52,14 @@ input "1739:31251:DLL07BE:01_06CB:7A13_To" {
     pointer_accel 1
 }
 
-input "1267:9376:ELAN_Touchs" {
+input "ELAN Touchscreen" {
     events enabled
     tap enabled
     dwt enabled
     click_method button_areas
     natural_scroll enabled
-    scroll_method twofinger
+    scroll_method two_finger
+    pointer_accel 1
 }
 ### Key bindings
 #
@@ -203,6 +204,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    status_command i3status
     position bottom
     colors {
         statusline #ffffff
