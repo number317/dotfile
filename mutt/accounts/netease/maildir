@@ -1,0 +1,9 @@
+# -*- Mode: muttrc -*-
+
+# Configuration to be used with a Maildir
+set mbox_type=Maildir
+set folder = '~/.local/usr/mail/netease'
+set mbox='~/.local/usr/mail/netease'
+set spoolfile='~/.local/usr/mail/netease/INBOX'
+set record='~/.local/usr/mail/netease/INBOX'
+set postponed='~/.local/usr/mail/netease/Drafts'

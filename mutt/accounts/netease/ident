@@ -1,0 +1,7 @@
+# -*- Mode: muttrc -*-
+
+# Identifying myself
+set realname = 'cheon'
+set from = 'cheon0112358d@163.com'
+set sig_dashes="yes"
+set signature = "~/.config/mutt/accounts/netease/signature"

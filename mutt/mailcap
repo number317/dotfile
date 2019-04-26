@@ -1,0 +1,5 @@
+text/html;      w3m -dump %s; nametemplate=%s.html; copiousoutput
+audio/*; mplayer %s
+image/*; display %s
+application/pdf; zathura %s
+application/octet-stream; libreoffice %s

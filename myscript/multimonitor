@@ -28,8 +28,10 @@ main(){
            declare pos1=0x$((external_y-primary_y)) pos2="$primary_x"x$((external_y-primary_y))
         fi
         if [[ ${primary_x}x${primary_y} == ${external_x}x${external_y} ]]; then
-            [[ $mode == normal ]] && herbstclient add_monitor ${external_x}x${external_y}+${primary_x}+0 2 external
-            [[ $mode == left ]] && herbstclient add_monitor ${external_y}x${external_x}+${primary_x}+0 2 external
+            [[ $mode == normal ]] && herbstclient add_monitor ${external_x}x${external_y}+${primary_x}+0 b external
+            [[ $mode == left ]] && herbstclient add_monitor ${external_y}x${external_x}+${primary_x}+0 b external
+        else
+            herbstclient pad 1 0 20 171 20
         fi
         output_1=$(xrandr | grep " connected " | sed 2d | awk '{print $1}')
         output_2=$(xrandr | grep " connected " | sed 1d | awk '{print $1}')

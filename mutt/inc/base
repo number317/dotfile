@@ -1,0 +1,66 @@
+# -*- Mode: muttrc -*-
+
+# Caches
+set header_cache='~/.cache/mutt/headercache'
+set message_cachedir='~/.cache/mutt/messagecache'
+set certificate_file='~/.cache/mutt/certificates'
+
+# Automatic viewing html
+auto_view text/html
+
+# Sync and check intervals
+set read_inc = 100
+set mail_check = 120
+set timeout = 15
+
+# Sidebar
+set sidebar_visible = no
+set sidebar_divider_char = '│'
+set sidebar_short_path = no
+set sidebar_indent_string = '└──'
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+set mail_check_stats
+
+# Futher config
+set tmpdir=~/.cache/mutt/tmp
+set mailcap_path=~/.config/mutt/mailcap
+set abort_nosubject = ask-yes
+set abort_unmodified = yes
+set delete = ask-yes
+set editor = "$EDITOR"
+set content_type = 'text/plain'
+set mark_old = no
+set sort = threads
+set sort_aux = reverse-last-date-received
+set rfc2047_parameters=yes
+set pager_index_lines = 15
+set charset = "utf-8"
+set include
+set nohelp
+set arrow_cursor
+
+# Key bind
+bind pager G bottom
+bind pager j next-line
+bind pager k previous-line
+bind pager \cf next-page
+bind pager \cb previous-page
+bind pager \cj next-entry
+bind pager \ck previous-entry
+bind pager gg top
+bind pager G bottom
+bind index gg first-entry
+bind index G last-entry
+bind index R group-reply
+bind index \cf next-page
+bind index \cb previous-page
+bind index } bottom-page
+bind index f change-folder
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager <F3> sidebar-page-up
+bind index,pager <F4> sidebar-page-down
+bind index,pager <F5> sidebar-prev-new
+bind index,pager <F6> sidebar-next-new
+bind index,pager B sidebar-toggle-visible

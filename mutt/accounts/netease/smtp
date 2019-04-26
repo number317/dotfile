@@ -1,0 +1,4 @@
+# -*- Mode: muttrc -*-
+set ssl_starttls=yes
+set smtp_url='smtps://cheon0112358d@smtp.163.com'
+set smtp_authenticators="gassapi:login"

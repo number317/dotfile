@@ -1,0 +1,10 @@
+# -*- Mode: Muttrc -*-
+
+source ~/.config/mutt/inc/base
+source ~/.config/mutt/inc/colors
+source ~/.config/mutt/inc/sidebar
+
+source ~/.config/mutt/accounts/netease/imap
+source ~/.config/mutt/accounts/netease/ident
+source ~/.config/mutt/accounts/netease/smtp
+source ~/.config/mutt/accounts/netease/mailboxes

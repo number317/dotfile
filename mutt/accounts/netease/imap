@@ -1,0 +1,11 @@
+# -*- Mode: muttrc -*-
+
+set imap_user="cheon0112358d@163.com"
+set folder='imaps://cheon0112358d@imap.163.com/'
+set spoolfile='+INBOX'
+set record='+Sent'
+set postponed="+Drafts"
+set imap_check_subscribed
+set imap_keepalive=300
+set mail_check=120
+unset imap_passive
