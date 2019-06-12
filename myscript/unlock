@@ -1,4 +1,4 @@
 #!/bin/bash
 pkill xautolock
 xset dpms 60000 60000 60000
-xset s 6000
+xset s 600

@@ -58,7 +58,14 @@ function! ToggleGUICruft()
     endif
 endfunction
 map <F11> <Esc>:call ToggleGUICruft()<cr>
+noremap <F10> <Esc>:terminal<CR><c-w>J<c-w>20-
 set guioptions=i
+
+" ------------------------template---------------------------
+autocmd BufNewFile *.c 0r /home/cheon/.vim/template/tlp.c
+autocmd BufNewFile *.sh 0r /home/cheon/.vim/template/tlp.sh
+autocmd BufNewFile *.py 0r /home/cheon/.vim/template/tlp.py
+autocmd BufNewFile *.html 0r /home/cheon/.vim/template/tlp.html
 
 " ------------------------autoLoad---------------------------
 set wildmenu
@@ -76,9 +83,9 @@ autocmd FileType yaml       setl indentkeys-=<:>
 set ofu=syntaxcomplete#Complete
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap < <><Esc>i
 inoremap { {}<Esc>i
-autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
+autocmd FileType html inoremap < <><Esc>i
+autocmd FileType xml inoremap < <><Esc>i
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
 inoremap > <c-r>=ClosePair('>')<CR>
@@ -86,8 +93,6 @@ inoremap } <c-r>=ClosePair('}')<CR>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 inoremap ` <c-r>=QuoteDelim("`")<CR>
-
-noremap <F10> <Esc>:terminal<CR><c-w>J<c-w>20-
 
 "{{{ Function for autoComplete
 function ClosePair(char)

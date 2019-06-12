@@ -21,7 +21,7 @@ set $menu dmenu_run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/cheon/Pictures/wallpapers/mountain.jpg fill
+output * bg /home/cheon/Pictures/wallpapers/rose.jpg fill
 #
 # Example configuration:
 #

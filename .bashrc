@@ -42,11 +42,11 @@ ranger() {
 set -o vi
 export PATH=$PATH:$HOME/.local/usr/bin/
 if [ $UID == "0" ]; then
-    #symbol="\[\e[31;1m\]╭──»─\n\[\e[31;1m\]╰──¤─\[\e[0m\]";
-    symbol="\[\e[31;1m\]»» \[\e[0m\]";
+    symbol="\[\e[31;1m\]┌──»─ \w\n\[\e[31;1m\]└──«─ \[\e[0m\]";
+    #symbol="\[\e[31;1m\]»» \[\e[0m\]";
 else
-    #symbol="\[\e[34;1m\]╭──»─\n\[\e[34;1m\]╰──¤─\[\e[0m\]";
-    symbol="\[\e[34;1m\]»» \[\e[0m\]";
+    symbol="\[\e[34;1m\]┌──»─ \w\n\[\e[34;1m\]└──«─ \[\e[0m\]";
+    #symbol="\[\e[34;1m\]»» \[\e[0m\]";
 fi
 
 export PS1="$symbol"
@@ -58,5 +58,6 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 export QT_SCALE_FACTOR=1.8
 export GDK_SCALE=1.8
+export MALLOC_TRACE=/home/cheon/Downloads/trace.log
 
 export PYTHONPATH=/home/cheon/Codes/dockeraily/python/site-packages

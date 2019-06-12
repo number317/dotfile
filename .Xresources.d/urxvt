@@ -1,6 +1,7 @@
 ! vi: set ft=xdefaults :
 !!basic
 URxvt*termName: rxvt-256color
+URxvt*geometry: 100x25
 
 !!input
 URxvt.preeditType: OffTheSpot

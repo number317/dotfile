@@ -30,12 +30,10 @@ hc keybind Mod1-Tab spawn wselect
 # cunstomer keybind
 hc keybind $Mod-d spawn dmenu_run_hlwm
 hc keybind $Mod-Ctrl-b spawn firefox
-hc keybind $Mod-Ctrl-e spawn thunderbird
-# hc keybind XF86AudioRaiseVolume spawn amixer set Master 5%+
+hc keybind $Mod-Ctrl-e spawn $TERMINAL -e mutt
+hc keybind $Mod-Ctrl-s spawn $TERMINAL -e ssh-tool
 hc keybind XF86AudioRaiseVolume spawn pactl set-sink-volume 0 +5%
-# hc keybind XF86AudioLowerVolume spawn amixer set Master 5%-
 hc keybind XF86AudioLowerVolume spawn pactl set-sink-volume 0 -5%
-# hc keybind XF86AudioMute spawn amixer set Master toggle
 hc keybind XF86AudioMute spawn pactl set-sink-mute 0 toggle
 hc keybind XF86MonBrightnessUp spawn xbacklight -inc 5
 hc keybind XF86MonBrightnessDown spawn xbacklight -dec 5
@@ -166,8 +164,7 @@ hc set mouse_recenter_gap 0
 # rules
 hc unrule -F
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
-hc rule class=Firefox tag=2 # move all firefox to tag 2
-hc rule class=Thunderbird tag=3 # move all thunderbird to tag 3
+hc rule class="Firefox Developer Edition" tag=2 # move all firefox to tag 2
 hc rule focus=on # normally focus new clients
 #hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals

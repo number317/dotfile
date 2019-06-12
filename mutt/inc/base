@@ -5,6 +5,8 @@ set header_cache='~/.cache/mutt/headercache'
 set message_cachedir='~/.cache/mutt/messagecache'
 set certificate_file='~/.cache/mutt/certificates'
 
+set alias_file='~/.config/mutt/inc/alias'
+
 # Automatic viewing html
 auto_view text/html
 
@@ -15,7 +17,7 @@ set timeout = 15
 
 # Sidebar
 set sidebar_visible = no
-set sidebar_divider_char = '│'
+set sidebar_divider_char = ' │ '
 set sidebar_short_path = no
 set sidebar_indent_string = '└──'
 set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
@@ -28,6 +30,7 @@ set abort_nosubject = ask-yes
 set abort_unmodified = yes
 set delete = ask-yes
 set editor = "$EDITOR"
+set edit_headers = no
 set content_type = 'text/plain'
 set mark_old = no
 set sort = threads

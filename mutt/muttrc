@@ -3,6 +3,7 @@
 source ~/.config/mutt/inc/base
 source ~/.config/mutt/inc/colors
 source ~/.config/mutt/inc/sidebar
+source ~/.config/mutt/inc/alias
 
 source ~/.config/mutt/accounts/netease/imap
 source ~/.config/mutt/accounts/netease/ident
