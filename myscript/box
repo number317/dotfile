@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -euo pipefail
+
+main(){
+
+    local width=${1:-8}
+    local height=${2:-1}
+
+    echo -n "┌"
+    for((i=0; i<$width;i++)); do
+        echo -n "─"
+    done
+    echo "┐"
+    for((i=0;i<$height;i++)); do
+        echo -n "│"
+        for((j=0; j<$width;j++)); do
+            echo -n " "
+        done
+        echo "│"
+    done
+    echo -n "└"
+    for((i=0; i<$width;i++)); do
+        echo -n "─"
+    done
+    echo "┘"
+}
+
+[[ "$0" == "$BASH_SOURCE" ]] && main "$@" || true
+

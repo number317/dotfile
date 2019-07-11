@@ -1,5 +1,6 @@
 "{{{ vim-plug
 call plug#begin('~/.vim/plugged')
+Plug 'ryanoasis/vim-devicons'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
@@ -19,6 +20,7 @@ if has("autocmd")
 endif
 
 syntax on
+set encoding=UTF-8
 set backspace=2
 set t_Co=256
 " set termguicolors
@@ -48,7 +50,6 @@ set guifont=SF\ Mono\ 16
 set guifontwide=.PingFang\ SC\ 16
 colorscheme gruvbox
 set background=dark
-
 " ------------------------guioptions-------------------------
 function! ToggleGUICruft()
     if &guioptions=='i'
