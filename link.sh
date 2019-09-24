@@ -22,6 +22,9 @@ ln -sfv "$PWD/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
 ln -sfv "$PWD/.mplayer" "$HOME/"
 
 ln -sfv "$PWD/.vim" "$HOME/"
+ln -sfv "$HOME/Codes/vim-plugs/" "$PWD/.vim/plugged"
+
+ln -sfv "$PWD/.emacs.d/" "$HOME/"
 
 ln -sfv "$PWD/.nethackrc" "$HOME/.nethackrc"
 

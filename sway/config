@@ -16,12 +16,12 @@ set $right l
 # Your preferred terminal emulator
 set $term urxvt
 # Your preferred application launcher
-set $menu dmenu_run
+set $menu demenu-run
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/cheon/Pictures/wallpapers/rose.jpg fill
+output * bg /home/cheon/Pictures/wallpapers/sunset.jpg fill
 #
 # Example configuration:
 #
@@ -43,7 +43,7 @@ output * bg /home/cheon/Pictures/wallpapers/rose.jpg fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "DLL07BE:01 06CB:7A13 Touchpad" {
+input "1739:31251:DLL07BE:01_06CB:7A13_Touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
@@ -52,7 +52,7 @@ input "DLL07BE:01 06CB:7A13 Touchpad" {
     pointer_accel 1
 }
 
-input "ELAN Touchscreen" {
+input "1267:9376:ELAN_Touchscreen" {
     events enabled
     tap enabled
     dwt enabled
@@ -69,7 +69,7 @@ input "ELAN Touchscreen" {
     bindsym $mod+Return exec $term
 
     # kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # start your launcher
     bindsym $mod+d exec $menu
@@ -82,7 +82,7 @@ input "ELAN Touchscreen" {
     floating_modifier $mod normal
 
     # reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # exit sway (logs you out of your wayland session)
     bindsym $mod+Shift+e exit
@@ -143,8 +143,8 @@ input "ELAN Touchscreen" {
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+o splith
+    bindsym $mod+u splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
@@ -199,17 +199,38 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+bindsym $mod+ctrl+l exec swaylock -i "/home/cheon/Pictures/wallpapers/rose.jpg"
+
+hide_edge_borders none
+
+default_border none
+default_floating_border none
+hide_edge_borders none
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
+
 bar {
-    status_command i3status
-    position bottom
+    position top
+	mode invisible
+   
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        statusline   #78da59
+        background #585858
+		separator #fff32e
+				            #border 	#bg		#txt
+        focused_workspace	#585858	#585858	#ffba08
+        inactive_workspace	#585858	#585858	 #cde4e6
+        active_workspace	#777F8B	#777F8B	#cde4e6
+    	urgent_workspace	#DEDFE3	#DEDFE3	#767E8A   
+
+
+
+		focused_workspace	#585858	#585858	#66FF66 
+        inactive_workspace	#585858	#585858	 #8C8C8C 
+		active_workspace	#777F8B	#777F8B	#ecedee
+    	urgent_workspace	#DEDFE3	#DEDFE3	#767E8A       
     }
 }
 

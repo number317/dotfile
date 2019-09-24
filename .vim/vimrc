@@ -48,7 +48,7 @@ filetype plugin indent on
 " set guifont=Schumacher\ Clean\ 10
 set guifont=SF\ Mono\ 16
 set guifontwide=.PingFang\ SC\ 16
-colorscheme gruvbox
+colorscheme space-vim-dark
 set background=dark
 " ------------------------guioptions-------------------------
 function! ToggleGUICruft()
@@ -221,7 +221,7 @@ let g:ale_linters = {
 \   'c++': ['gcc'],
 \}
 
-let g:ale_c_gcc_options = '-Wall -O2 -std=c11'
+let g:ale_c_gcc_options = "-Wall -std=gnu11 `pkg-config --cflags gtk+-3.0` `pkg-config --libs gtk+-3.0`"
 
 hi! clear SpellBad
 hi! clear SpellCap
