@@ -1,5 +1,6 @@
 # Write your default config options here!
+ass=true
 subcp = "utf-8"
 fontconfig=0
 font = "/usr/share/fonts/PingFang/PingFang Regular.ttf"
-subfont-text-scale = "2.000000"
+subfont-text-scale = "4.000000"

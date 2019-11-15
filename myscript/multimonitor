@@ -35,7 +35,7 @@ main(){
         fi
         output_1=$(xrandr | grep " connected " | sed 2d | awk '{print $1}')
         output_2=$(xrandr | grep " connected " | sed 1d | awk '{print $1}')
-        xrandr --output ${output_2} --mode "$external_x"x"$external_y" --pos "$pos2" --rotate "${mode}" --output VIRTUAL1 --off --output ${output_1} --primary --mode "$primary_x"x"$primary_y" --pos $pos1 --rotate normal
+        xrandr --output ${output_2} --mode "$external_x"x"$external_y" --pos "$pos2" --rotate "${mode}" --output ${output_1} --primary --mode "$primary_x"x"$primary_y" --pos $pos1 --rotate normal
     fi
 }
 

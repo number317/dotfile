@@ -1,8 +1,8 @@
 "{{{ vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'ryanoasis/vim-devicons'
-Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
 call plug#end()
@@ -36,6 +36,7 @@ set showcmd
 set hlsearch
 " cindent may cause err indent when block insert"
 "set cindent
+set wildmenu
 set tabstop=4
 set expandtab
 set softtabstop=4
@@ -69,7 +70,6 @@ autocmd BufNewFile *.py 0r /home/cheon/.vim/template/tlp.py
 autocmd BufNewFile *.html 0r /home/cheon/.vim/template/tlp.html
 
 " ------------------------autoLoad---------------------------
-set wildmenu
 autocmd FileType c          set omnifunc=ccomplete#Complete
 autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
@@ -78,7 +78,6 @@ autocmd FileType python     set omnifunc=pythoncomplete#CompleteTags
 autocmd FileType javascript	set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yaml       setl indentkeys-=<:>
-
 
 " ------------------------autoComplete-----------------------
 set ofu=syntaxcomplete#Complete
@@ -94,6 +93,13 @@ inoremap } <c-r>=ClosePair('}')<CR>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 inoremap ` <c-r>=QuoteDelim("`")<CR>
+
+" -------------------- userful map --------------------
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>"  viw<esc>a"<esc>hbi"<esc>lel
+"nnoremap <leader>'  `<i'<esc>`>a'<esc>
+iabbrev @@ cheon0112358d@gmail.com
 
 "{{{ Function for autoComplete
 function ClosePair(char)
@@ -161,6 +167,7 @@ set laststatus=2
 
 "{{{ ycm config
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+let g:ycm_use_clangd = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_show_diagnostics_ui = 0
@@ -171,7 +178,9 @@ let g:ycm_key_invoke_completion = '<c-space>'
 let g:ycm_disable_for_files_large_than_kb = 1024
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
-set completeopt=menu,menuone
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<CR>"
+set completeopt=longest,menu
 
 let g:ycm_semantic_triggers =  {
             \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
@@ -214,8 +223,15 @@ let g:ale_lint_delay = 500
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
-let g:ale_sign_error = '✗✗'
-let g:ale_sign_warning = '!!'
+
+if $TERM =~ "linux"
+    let g:ale_sign_error = 'xx'
+    let g:ale_sign_warning = '!!'
+else
+    let g:ale_sign_error = ''
+    let g:ale_sign_warning = ''
+endif
+
 let g:ale_linters = {
 \   'c': ['gcc'],
 \   'c++': ['gcc'],

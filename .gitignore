@@ -10,6 +10,7 @@ ranger/__pycache__/
 .emacs.d/auto-save-list
 .emacs.d/elpa
 .emacs.d/eshell
+.emacs.d/games
 .emacs.d/request
 .emacs.d/.ycm_extra_conf.py
 
@@ -26,5 +27,8 @@ myscript/appimagetool
 myscript/apprun
 myscript/markdown
 myscript/panel
+myscript/tict
 
 mutt/inc/alias
+
+ranger/plugins/__pycache__
