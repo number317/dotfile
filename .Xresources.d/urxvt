@@ -11,11 +11,6 @@ URxvt.inputMethod: ibus
 URxvt.perl-ext-common: default,matcher,eval
 
 !!keyboard select
-URxvt*keysym.M-Escape: perl:keyboard-select:activate
-URxvt*keysym.C-s: perl:keyboard-select:search
-URxvt*keysym.M-w: perl:clipboard:copy
-URxvt*keysym.C-y: perl:clipboard:paste
-
 URxvt.keysym.M-c: eval:selection_to_clipboard
 URxvt.keysym.M-v: eval:paste_clipboard
 URxvt.keysym.M-V: eval:paste_primary

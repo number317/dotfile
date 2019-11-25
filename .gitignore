@@ -13,6 +13,7 @@ ranger/__pycache__/
 .emacs.d/games
 .emacs.d/request
 .emacs.d/.ycm_extra_conf.py
+.emacs.d/recentf
 
 herbstluftwm/dconf
 herbstluftwm/ibus

@@ -11,7 +11,7 @@ hc emit_hook reload
 #xsetroot -solid '#5A8E3A'
 
 feh --randomize --bg-fill $HOME/Pictures/wallpapers/*
-#compton -CGb --xrender-sync --xrender-sync-fence
+#picom -CGb --xrender-sync --xrender-sync-fence
 
 # remove all existing keybindings
 hc keyunbind --all

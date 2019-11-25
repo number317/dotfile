@@ -117,7 +117,12 @@ export SAL_DISABLE_OPENCL=1
 # for wayland
 # export MOZ_ENABLE_WAYLAND=1
 # export GDK_BACKEND=wayland
-printf "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-if [[ $UID == 1000 ]]; then
-    tict random
+
+if [[ $(tty) =~ /dev/pts/[0-9]* ]]; then
+    printf "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+    if [[ $UID == 1000 ]]; then
+	tict random
+    fi
+    # change cursor to ibeam
+    echo -e "\033[6 q"
 fi

@@ -1,0 +1,51 @@
+(require 'cl)
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+			   ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+(defvar my/packages '(
+		      company
+		      spacemacs-theme
+		      hungry-delete
+		      smartparens
+		      swiper
+		      counsel
+		      ) "Default packages")
+(setq package-selected-packages my/packages)
+(defun my/packages-installed-p()
+  (loop for pkg in my/packages
+	when (not (package-installed-p pkg)) do (return nil)
+	finally (return t)))
+(unless (my/packages-installed-p)
+  (message "%s" "Refreshing package cache...")
+  (package-refresh-contents)
+  (dolist (pkg my/packages)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
+
+;; plugin config
+(global-company-mode 1)
+
+(require 'hungry-delete)
+(global-hungry-delete-mode 1)
+
+(require 'smartparens-config)
+(smartparens-global-mode 1)
+
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "C-h f") 'counsel-describe-function)
+(global-set-key (kbd "C-h v") 'counsel-describe-variable)
+(global-set-key (kbd "C-h l") 'counsel-find-library)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+
+(require 'org)
+(setq org-src-fontify-natively t)
