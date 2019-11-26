@@ -6,13 +6,24 @@
 			   ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
 (defvar my/packages '(
 		      spacemacs-theme
-		      hungry-delete
-		      smartparens
+		      evil
+		      ycmd
 		      company
+		      company-ycmd
+		      flycheck
+		      flycheck-ycmd
+		      ivy
 		      swiper
 		      counsel
 		      neotree
 		      all-the-icons
+		      pkgbuild-mode
+		      dockerfile-mode
+		      yaml-mode
+		      markdown-mode
+		      gitignore-mode
+		      graphviz-dot-mode
+		      vimrc-mode
 		      ) "Default packages")
 (setq package-selected-packages my/packages)
 (defun my/packages-installed-p()
@@ -25,7 +36,16 @@
   (dolist (pkg my/packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
-;; plugin config
+
+;; ycmd
+(require 'ycmd)
+(add-hook 'c-mode-hook 'ycmd-mode)
+(setq ycmd-force-semantic-completion t)
+(setq ycmd-server-command '("python" "-u" "/home/cheon/Codes/dotfile/.vim/plugged/YouCompleteMe/third_party/ycmd/ycmd"))
+(setq ycmd-global-config "/home/cheon/.emacs.d/.ycm_extra_conf.py")
+(setq request-backend 'url-retrieve)
+
+;; company
 (global-company-mode 1)
 (setq company-idle-delay 0.1)
 (setq company-minimum-prefix-length 1)
@@ -34,10 +54,28 @@
   (define-key company-active-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
     (define-key company-active-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1))))
 
+;; company ycmd
+(require 'company-ycmd)
+(company-ycmd-setup)
+
+;; flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(setq flycheck-indication-mode (quote right-fringe))
+(setq flycheck-highlighting-mode (quote lines))
+(setq flycheck-gcc-args (quote -Wall))
+(setq flycheck-gcc-language-standard (quote gnu11))
+
+;; flycheck-ycmd
+(require 'flycheck-ycmd)
+(flycheck-ycmd-setup)
+
+;; evil
+(require 'evil)
+(evil-mode 1)
+
 ;; neotree
 (add-to-list 'load-path "/some/path/neotree")
 (require 'neotree)
-
 (setq neo-theme 'icons)
 (setq projectile-switch-project-action 'neotree-projectile-action)
 (setq neo-smart-open t)
@@ -56,12 +94,6 @@
 
 ;; all-the-icons
 (require 'all-the-icons)
-
-(require 'hungry-delete)
-(global-hungry-delete-mode 1)
-
-(require 'smartparens-config)
-(smartparens-global-mode 1)
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
