@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sshpass -p 0x0112358D ssh -fNg -D 8082 root@47.56.121.60 -p 22

@@ -1,10 +1,12 @@
 "{{{ vim-plug
 call plug#begin('~/.vim/plugged')
+Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 "}}}
 
@@ -166,34 +168,44 @@ set laststatus=2
 "}}}
 
 "{{{ ycm config
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-let g:ycm_use_clangd = 0
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_server_log_level = 'info'
-let g:ycm_min_num_identifier_candidate_chars = 3
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_key_invoke_completion = '<c-space>'
-let g:ycm_disable_for_files_large_than_kb = 1024
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<CR>"
-set completeopt=longest,menu
-
-let g:ycm_semantic_triggers =  {
-            \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-            \ 'cs,lua,javascript': ['re!\w{2}'],
-            \ }
-let g:ycm_filetype_whitelist = {
-			\ "c":1,
-			\ "sh":1,
-            \ "go":1,
-            \ "python":1,
-            \ "vim":1,
-            \ "yaml":1,
-			\ }
+" autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+" let g:ycm_use_clangd = 0
+" let g:ycm_server_python_interpreter='/usr/bin/python'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+" let g:ycm_add_preview_to_completeopt = 0
+" let g:ycm_show_diagnostics_ui = 0
+" let g:ycm_server_log_level = 'info'
+" let g:ycm_min_num_identifier_candidate_chars = 0
+" let g:ycm_collect_identifiers_from_comments_and_strings = 1
+" let g:ycm_key_invoke_completion = '<c-space>'
+" let g:ycm_disable_for_files_large_than_kb = 1024
+" let g:ycm_complete_in_comments = 1
+" let g:ycm_complete_in_strings = 1
+" nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<CR>"
+" set completeopt=longest,menu
+"
+" let g:ycm_semantic_triggers =  {
+"             \ 'c,cpp,python': ['re!\w{2}'],
+"             \ }
+" let g:ycm_filetype_whitelist = {
+"             \ 'c':1,
+"             \ 'cpp':1,
+"             \ 'python':1,
+"             \ }
+" let g:ycm_filetype_blacklist = {
+"       \ 'tagbar': 1,
+"       \ 'notes': 1,
+"       \ 'markdown': 1,
+"       \ 'netrw': 1,
+"       \ 'unite': 1,
+"       \ 'text': 1,
+"       \ 'vimwiki': 1,
+"       \ 'pandoc': 1,
+"       \ 'infolog': 1,
+"       \ 'leaderf': 1,
+"       \ 'mail': 1
+"       \}
 "}}}
 
 "{{{ NERDTree config
@@ -224,13 +236,16 @@ let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 
-if $TERM =~ "linux"
-    let g:ale_sign_error = 'xx'
-    let g:ale_sign_warning = '!!'
-else
-    let g:ale_sign_error = ''
-    let g:ale_sign_warning = ''
-endif
+let g:ale_sign_error = 'xx'
+let g:ale_sign_warning = '!!'
+
+" if $TERM =~ "linux"
+"     let g:ale_sign_error = 'xx'
+"     let g:ale_sign_warning = '!!'
+" else
+"     let g:ale_sign_error = ''
+"     let g:ale_sign_warning = ''
+" endif
 
 let g:ale_linters = {
 \   'c': ['gcc'],
