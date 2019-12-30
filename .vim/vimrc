@@ -1,12 +1,14 @@
 "{{{ vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
+Plug 'mzlogin/vim-markdown-toc'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
-" Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 "}}}
 
@@ -78,8 +80,13 @@ autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
 autocmd FileType sql        set omnifunc=sqlcomplete#Complete
 autocmd FileType python     set omnifunc=pythoncomplete#CompleteTags
 autocmd FileType javascript	set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yaml       setl indentkeys-=<:>
+
+autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType html       setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType css        setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType vue        setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 " ------------------------autoComplete-----------------------
 set ofu=syntaxcomplete#Complete
@@ -102,6 +109,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>"  viw<esc>a"<esc>hbi"<esc>lel
 "nnoremap <leader>'  `<i'<esc>`>a'<esc>
 iabbrev @@ cheon0112358d@gmail.com
+iabbrev phone 18558428190
 
 "{{{ Function for autoComplete
 function ClosePair(char)
@@ -167,45 +175,13 @@ set statusline+=\ %P
 set laststatus=2
 "}}}
 
-"{{{ ycm config
-" autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-" let g:ycm_use_clangd = 0
-" let g:ycm_server_python_interpreter='/usr/bin/python'
-" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-" let g:ycm_add_preview_to_completeopt = 0
-" let g:ycm_show_diagnostics_ui = 0
-" let g:ycm_server_log_level = 'info'
-" let g:ycm_min_num_identifier_candidate_chars = 0
-" let g:ycm_collect_identifiers_from_comments_and_strings = 1
-" let g:ycm_key_invoke_completion = '<c-space>'
-" let g:ycm_disable_for_files_large_than_kb = 1024
-" let g:ycm_complete_in_comments = 1
-" let g:ycm_complete_in_strings = 1
-" nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<CR>"
-" set completeopt=longest,menu
-"
-" let g:ycm_semantic_triggers =  {
-"             \ 'c,cpp,python': ['re!\w{2}'],
-"             \ }
-" let g:ycm_filetype_whitelist = {
-"             \ 'c':1,
-"             \ 'cpp':1,
-"             \ 'python':1,
-"             \ }
-" let g:ycm_filetype_blacklist = {
-"       \ 'tagbar': 1,
-"       \ 'notes': 1,
-"       \ 'markdown': 1,
-"       \ 'netrw': 1,
-"       \ 'unite': 1,
-"       \ 'text': 1,
-"       \ 'vimwiki': 1,
-"       \ 'pandoc': 1,
-"       \ 'infolog': 1,
-"       \ 'leaderf': 1,
-"       \ 'mail': 1
-"       \}
+"{{{ polyglot
+let g:markdown_enable_folding = 0
+let g:markdown_enable_mappings = 1
+"}}}
+
+"{{{ markdown toc
+let g:vmt_cycle_list_item_markers = 1
 "}}}
 
 "{{{ NERDTree config
@@ -260,5 +236,25 @@ hi! clear SpellRare
 hi! SpellBad gui=undercurl guisp=red
 hi! SpellCap gui=undercurl guisp=blue
 hi! SpellRare gui=undercurl guisp=magenta
+"}}}
 
+"{{{ coc
+hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+"}}}
+
+"{{{ fugitive
+"map <C-g> :Gblame<CR>
 "}}}

@@ -15,7 +15,10 @@
 (global-set-key (kbd "<f2>") 'open-init-file)
 
 ;; open recent files
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+;; (global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
+;; comment or uncomment
+(global-set-key (kbd "C-x c") 'comment-or-uncomment-region)
 
 ;; neotree
 (global-set-key (kbd "C-c n") 'neotree-toggle)

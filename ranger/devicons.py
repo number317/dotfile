@@ -1,7 +1,5 @@
 #!/usr/bin/python
 # coding=UTF-8
-import re;
-import os;
 
 # all those glyphs will show as weird squares if you don't have the correct patched font
 file_node_extensions = {
@@ -162,6 +160,7 @@ file_node_extensions = {
     'twig'     : '',
     'vim'      : '',
     'vimrc'    : '',
+    'vue'      : '﵂',
     'ttf'      : '',
     'wav'      : '',
     'webm'     : '',

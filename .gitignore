@@ -14,11 +14,19 @@ ranger/__pycache__/
 .emacs.d/request
 .emacs.d/.ycm_extra_conf.py
 .emacs.d/recentf
+.emacs.d/.lsp-session-v1
 
 herbstluftwm/dconf
 herbstluftwm/ibus
 herbstluftwm/dconf
 herbstluftwm/panel
+
+mpd/log
+mpd/state
+mpd/database
+mpd/playlists
+mpd/sticker.sql
+mpd/pid
 
 myscript/timesheet
 myscript/ssh-tool

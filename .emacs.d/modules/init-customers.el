@@ -21,4 +21,11 @@
     (setq interprogram-paste-function 'xsel-paste-function)
     ))
 
+(defun remove-dos-eol ()
+  "Replace DOS eolns CR LF with Unix eolns CR."
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
+
 (provide 'init-customers)
+;;; init-customers.el ends here
