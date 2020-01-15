@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cat << EOF >> .gitignore
+.vscode/
+.idea
+.project
+.classpath
+.c9
+*.launch
+.settings/
+*.sublime-workspace
+*.a
+build/
+vendor/
+EOF
+
+file --mime-type *|grep x-executable | awk -F':' '{print $1}' >> .gitignore

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+readonly TERMINAL=${TERMINAL:-urxvtc}
+readonly BROWSER="firefox"
+readonly FM="ranger"
+readonly EDITOR="emacs"
+readonly READER="zathura"
+readonly IMAGE="feh"
+readonly VIDEO="mplayer"
+readonly OFFICE="libreoffice"
+
+MIME_TYPE=$(file -bL --mime-type "$1")
+
+case ${MIME_TYPE} in
+    text/*)
+        gtk-launch $EDITOR "$1"
+        ;;
+    */x-sqlite3)
+        sqlite3 "$1"
+        ;;
+    */directory)
+        ${TERMINAL} -e ${FM} "$1"
+        ;;
+    */epub*|*/pdf)
+        ${READER} "$1"
+        ;;
+    video/*)
+        ${VIDEO} $1
+        ;;
+    audio/*)
+        ffplay $1
+        ;;
+    *)
+        echo ${MIME_TYPE}
+        echo "unknow how to open"
+        ;;
+esac
+

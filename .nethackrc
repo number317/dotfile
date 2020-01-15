@@ -1,6 +1,6 @@
 # === OPTIONS ===
 # character
-OPTIONS=name:cheon,race:human,role:archeologist,gender:male,align:neutral
+OPTIONS=name:cheon,race:human,role:wizard,gender:male,align:neutral
 # appearance
 OPTIONS=color,hilite_pet,lit_corridor,menucolors,DECgraphics,boulder:8
 OPTIONS=showexp,showscore,time

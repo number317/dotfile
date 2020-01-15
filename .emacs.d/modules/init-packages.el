@@ -10,13 +10,13 @@
 
 ;; all-the-icons
 (use-package all-the-icons
-  :defer 1
+  :defer 3
   :commands neotree-toggle)
 
 ;; flycheck
 (use-package flycheck
   :ensure t
-  :defer 1
+  :defer 3
   :hook (after-init . global-flycheck-mode)
   :init
   (setq flycheck-indication-mode (quote left-fringe)
@@ -24,6 +24,7 @@
         flycheck-c/c++-gcc-executable "gcc"
         flycheck-gcc-args "-Wall"
         flycheck-gcc-language-standard "gnu11"
+        flycheck-go-golint-executable "golint"
         flycheck-javascript-eslint-executable   "/opt/lsp/node_modules/eslint/bin/eslint.js"
         flycheck-python-pylint-executable "/opt/lsp/bin/pylint")
   :config
@@ -32,14 +33,14 @@
 ;; yasnippet
 (use-package yasnippet
   :ensure t
-  :defer 1
+  :defer 3
   :hook (after-init . yas-global-mode))
 
 ;; neotree
 (use-package neotree
   :ensure t
   :commands neotree-toggle
-  :defer 1
+  :defer 3
   :init
   (setq neo-theme 'icons)
   (setq neo-smart-open t)
@@ -61,7 +62,7 @@
 ;; emmet-mode
 (use-package emmet-mode
   :ensure t
-  :defer 1
+  :defer 3
   :config
   (setq emmet-indent-after-insert nil)
   (setq emmet-expand-jsx-className? t)
@@ -70,7 +71,7 @@
 ;; web-mode
 (use-package web-mode
   :ensure t
-  :defer 1
+  :defer 3
   :init
   (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -93,7 +94,7 @@
 
 (use-package ivy
   :ensure t
-  :defer 1
+  :defer 3
   :init
   (ivy-mode t)
   ;; (setq ivy-use-virtual-buffers t
@@ -104,8 +105,8 @@
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
-  :defer 1
-  :hook ((c-mode c++-mode python-mode js-mode css-mode web-mode sh-mode) . lsp-deferred)
+  :defer 3
+  :hook ((c-mode c++-mode python-mode go-mode js-mode css-mode web-mode sh-mode) . lsp-deferred)
   :init
   (setq lsp-prefer-flymake nil
         lsp-clients-clangd-executable "/opt/clang+llvm-9.0.0-x86_64-pc-linux-gnu/bin/clangd"
@@ -149,7 +150,7 @@
 ;; company lsp
 (use-package company-lsp
   :ensure t
-  :defer 1
+  :defer 3
   :init
   (push 'company-lsp company-backends)
   :commands company-lsp)

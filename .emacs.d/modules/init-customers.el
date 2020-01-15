@@ -27,5 +27,7 @@
   (goto-char (point-min))
   (while (search-forward "\r" nil t) (replace-match "")))
 
+(add-hook 'before-save-hook #'gofmt-before-save)
+
 (provide 'init-customers)
 ;;; init-customers.el ends here
