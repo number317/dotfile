@@ -1,25 +1,28 @@
 {
+    "coc.preferences.colorSupport": true,
+    "coc.preferences.formatOnSaveFiletypes": ["js", "go"],
     "diagnostic.displayByAle": true,
     "suggest.enablePreview": true,
     "suggest.acceptSuggestionOnCommitCharacter": true,
     "python.pythonPath": "/usr/bin/python",
     "python.linting.pylintPath": "/opt/lsp/bin/pylint",
+    "highlight.colors.enable": true,
     "languageserver": {
         "clangd": {
             "command": "/opt/clang+llvm-9.0.0-x86_64-pc-linux-gnu/bin/clangd",
             "args": ["--background-index", "-j=8"],
-            "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+            "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/", "Makefile"],
             "filetypes": ["c", "cpp", "objc", "objcpp"]
+        },
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod", ".git/"],
+            "filetypes": ["go"]
         },
         "bash": {
             "command": "/opt/lsp/node_modules/bash-language-server/bin/main.js",
             "args": ["start"],
             "filetypes": ["sh"],
-            "ignoredRootPaths": ["~"]
-        },
-        "vls": {
-            "command": "/opt/lsp/node_modules/vue-language-server/bin/vls",
-            "filetypes": ["vue"],
             "ignoredRootPaths": ["~"]
         }
     }

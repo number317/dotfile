@@ -10,13 +10,11 @@
 
 ;; all-the-icons
 (use-package all-the-icons
-  :defer 3
   :commands neotree-toggle)
 
 ;; flycheck
 (use-package flycheck
   :ensure t
-  :defer 3
   :hook (after-init . global-flycheck-mode)
   :init
   (setq flycheck-indication-mode (quote left-fringe)
@@ -33,14 +31,12 @@
 ;; yasnippet
 (use-package yasnippet
   :ensure t
-  :defer 3
   :hook (after-init . yas-global-mode))
 
 ;; neotree
 (use-package neotree
   :ensure t
   :commands neotree-toggle
-  :defer 3
   :init
   (setq neo-theme 'icons)
   (setq neo-smart-open t)
@@ -59,19 +55,9 @@
               (evil-define-key 'normal neotree-mode-map (kbd "A") 'neotree-stretch-toggle)
               (evil-define-key 'normal neotree-mode-map (kbd "I") 'neotree-hidden-file-toggle))))
 
-;; emmet-mode
-(use-package emmet-mode
-  :ensure t
-  :defer 3
-  :config
-  (setq emmet-indent-after-insert nil)
-  (setq emmet-expand-jsx-className? t)
-  :hook ((css-mode html-mode web-mode) . emmet-mode))
-
 ;; web-mode
 (use-package web-mode
   :ensure t
-  :defer 3
   :init
   (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -85,16 +71,17 @@
   (add-to-list 'auto-mode-alist '("\\.js?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.less?\\'" . web-mode))
   :config
   (setq web-mode-markup-indent-offset 2
         web-mode-css-indent-offset 2
         web-mode-code-indent-offset 2
         web-mode-style-padding 0
+        web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'"))
         web-mode-script-padding 0))
 
 (use-package ivy
   :ensure t
-  :defer 3
   :init
   (ivy-mode t)
   ;; (setq ivy-use-virtual-buffers t
@@ -105,14 +92,11 @@
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
-  :defer 3
   :hook ((c-mode c++-mode python-mode go-mode js-mode css-mode web-mode sh-mode) . lsp-deferred)
   :init
   (setq lsp-prefer-flymake nil
         lsp-clients-clangd-executable "/opt/clang+llvm-9.0.0-x86_64-pc-linux-gnu/bin/clangd"
-        lsp-vetur-server-command "/opt/lsp/node_modules/vue-language-server/bin/vls"
-        lsp-clients-javascript-typescript-server "/opt/lsp/node_modules/typescript-language-server/lib/cli.js"
-        lsp-clients-typescript-server "/opt/lsp/node_modules/typescript-language-server/lib/cli.js"))
+        lsp-vetur-server-command "/opt/lsp/node_modules/vue-language-server/bin/vls"))
 
 ;; lsp ui
 ;; (use-package lsp-ui
@@ -150,7 +134,6 @@
 ;; company lsp
 (use-package company-lsp
   :ensure t
-  :defer 3
   :init
   (push 'company-lsp company-backends)
   :commands company-lsp)

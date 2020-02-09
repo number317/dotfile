@@ -20,8 +20,8 @@
                                    'face 'font-lock-doc-face
                                    'help-echo (buffer-file-name)))
 
-               (setcdr (assq 'vc-mode mode-line-format)
-                       '((:eval (propertize (replace-regexp-in-string "^ Git:" "  " vc-mode) 'face 'font-lock-comment-face))))
+               ;; (setcdr (assq 'vc-mode mode-line-format)
+               ;;         '((:eval (propertize (replace-regexp-in-string "^ Git:" "  " vc-mode) 'face 'font-lock-comment-face))))
 
                ;; the current major mode
                (propertize "  [" 'face 'font-lock-variable-name-face)
