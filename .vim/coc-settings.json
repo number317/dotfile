@@ -1,11 +1,28 @@
 {
     "coc.preferences.colorSupport": true,
     "coc.preferences.formatOnSaveFiletypes": ["js", "go"],
-    "diagnostic.displayByAle": true,
+    "coc.preferences.snippets.enable": true,
+    "coc.preferences.enableFloatHighlight": true,
+
+    "suggest.noselect": false,
     "suggest.enablePreview": true,
+    "suggest.triggerAfterInsertEnter": true,
     "suggest.acceptSuggestionOnCommitCharacter": true,
+    "suggest.autoTrigger": "always",
+    "suggest.floatEnable": true,
+    "suggest.minTriggerInputLength": 2,
+    "suggest.removeDuplicateItems": true,
+
+    "css.lint.float": "warning",
+    "less.lint.float": "warning",
+    "tsserver.enableJavascript": true,
+
+    "diagnostic.displayByAle": true,
+
     "python.pythonPath": "/usr/bin/python",
     "python.linting.pylintPath": "/opt/lsp/bin/pylint",
+
+    "javascript.format.enabled": true,
     "highlight.colors.enable": true,
     "languageserver": {
         "clangd": {

@@ -6,6 +6,7 @@ ranger/__pycache__/
 .vim/swap
 .vim/.netrwhist
 .vim/plugged
+.vim/spell
 
 .emacs.d/auto-save-list
 .emacs.d/elpa
