@@ -51,7 +51,7 @@ file_node_extensions = {
     'el'       : 'λ',
     'elf'      : '',
     'epub'     : '',
-    'erl'      : '',
+    'erl'      : 'λ',
     'exe'      : '',
     'f#'       : '',
     'fifo'     : '|',

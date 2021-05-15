@@ -1,4 +1,4 @@
 gtk-icon-theme-name = "Mojave-light"
 gtk-theme-name = "Mojave-light"
-gtk-font-name = "DejaVu Sans16"
+gtk-font-name = "DejaVu Sans 16"
 gtk-decoration-layout = "menu,close,maximize,minimize:"

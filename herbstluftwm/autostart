@@ -10,9 +10,6 @@ hc emit_hook reload
 
 #xsetroot -solid '#5A8E3A'
 
-feh --randomize --bg-fill $HOME/Pictures/wallpapers/*
-#picom -CGb --xrender-sync --xrender-sync-fence
-
 # remove all existing keybindings
 hc keyunbind --all
 
@@ -28,9 +25,9 @@ hc keybind $Mod-Return spawn ${TERMINAL:-urxvtc} # use your $TERMINAL with xterm
 hc keybind Mod1-Tab spawn wselect
 
 # cunstomer keybind
-hc keybind $Mod-d spawn dmenu_run_hlwm -fn "SF Mono-16" -nb "#2E3440" -nf "#D8DEE9"
-#hc keybind $Mod-d spawn rofi -show run
-hc keybind $Mod-Ctrl-b spawn firefox
+# hc keybind $Mod-d spawn dmenu_run -fn "Fira Code-12" -nb "#2E3440" -nf "#D8DEE9"
+hc keybind $Mod-d spawn ~/.config/rofi/bin/launcher_text
+hc keybind $Mod-Ctrl-b spawn $BROWSER
 hc keybind $Mod-Ctrl-e spawn $TERMINAL -e mutt
 hc keybind $Mod-Ctrl-s spawn $TERMINAL -e ssh-tool
 hc keybind XF86AudioRaiseVolume spawn pactl set-sink-volume 0 +5%
@@ -187,11 +184,9 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 hc detect_monitors
 
 # find the panel
-#panel &
-
-# panel=~/.config/herbstluftwm/panel/panel.sh
 # [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
 # for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 #    # start it on each monitor
 #    panel $monitor &
 # done
+# /home/cheon/.config/polybar/launch.sh

@@ -1,6 +1,9 @@
 ! #include ".Xresources.d/xterm"
 #include ".Xresources.d/urxvt"
-#include ".Xresources.d/color/chinese.color"
+#include ".Xresources.d/color/navy_and_ivory.color"
+
+! scale 1.5
+Xft.dpi: 144
 #include ".Xresources.d/font/macos.font"
 
-!Xft.dpi: 176
+! Xft.dpi: 176

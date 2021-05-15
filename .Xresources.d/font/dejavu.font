@@ -1,0 +1,21 @@
+! vi: set ft=xdefaults :
+
+!!font
+URxvt.font: xft:DejaVuSansMono Nerd Font Mono:antialias=True:style=Regular:pixelsize=22:hinting=true,\
+            xft:Twitter Color Emoji:antialias=True:style=Regular:pixelsize=22:hinting=true,\
+            xft:.PingFang SC:antialias=True:style=Regular:pixelsize=22:hinting=true
+
+URxvt.boldFont: xft:DejaVuSansMono Nerd Font Mono:antialias=True:style=Bold:pixelsize=22:hinting=true,\
+                xft:Twitter Color Emoji:antialias=True:style=Bold:pixelsize=22:hinting=true,\
+                xft:.PingFang SC:antialias=True:style=Bold:pixelsize=22:hinting=true
+
+URxvt.italicFont: xft:DejaVuSansMono Nerd Font Mono:antialias=True:style=Regular Italic:pixelsize=22:hinting=true,\
+                  xft:Twitter Color Emoji:antialias=True:style=Regular Italic:pixelsize=22:hinting=true,\
+                  xft:.PingFang SC:antialias=True:style=Light:pixelsize=22:hinting=true
+
+URxvt.boldItalicFont: xft:DejaVuSansMono Nerd Font Mono:antialias=True:style=Bold Italic Italic:pixelsize=22:hinting=true,\
+                      xft:Twitter Color Emoji:antialias=True:style=Bold Italic:pixelsize=22:hinting=true,\
+                      xft:.PingFang SC:antialias=True:style=Medium:pixelsize=22:hinting=true
+
+!!without this, urxvt will exist a border on the right???
+URxvt.letterSpace: -2.0
