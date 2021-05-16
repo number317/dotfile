@@ -1,18 +1,18 @@
 #!/bin/bash
 
-readonly TERMINAL=${TERMINAL:-urxvtc}
+readonly TERMINAL=${TERMINAL:-st}
 readonly BROWSER="firefox"
 readonly FM="ranger"
 readonly EDITOR="emacs"
 readonly READER="zathura"
 readonly IMAGE="feh"
-readonly VIDEO="mplayer"
+readonly VIDEO="ffplay"
 readonly OFFICE="libreoffice"
 
 MIME_TYPE=$(file -bL --mime-type "$1")
 
 case ${MIME_TYPE} in
-    text/*)
+    text/*|application/json|*/xml)
         gtk-launch $EDITOR "$1"
         ;;
     */x-sqlite3)

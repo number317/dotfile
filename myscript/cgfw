@@ -1,0 +1,5 @@
+#!/bin/bash
+cat << EOF >&1
+export http_proxy=http://cloud.cheon.site:10002
+export https_proxy=http://cloud.cheon.site:10002
+EOF
